@@ -1,3 +1,5 @@
+/* Global styles + styles for elements in the home page */
+
 @import url(./color-palette.css);
 
 * {
@@ -5,6 +7,11 @@
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+
+    &:focus-visible {
+        outline: var(--focus-outline);
+        outline-offset: var(--focus-outline-offset);
+    }
 }
 
 :root {
@@ -19,20 +26,23 @@
     /* Find a better way to include into the palette */
     --outline-decorative: 1px solid rgb(181, 182, 184, 0.2);
 
-
-    /* --corners: 1em; */
     --corners: clamp(0.5em, 2vw, 1em);
     --shadow: 
-        0 8px 12px #5b5d5d0d;
+        /* 0 8px 12px #5b5d5d0d; */
+        0 8px 12px hsla(180, 1%, 36%, 0.051);
     --shadow-images: 
-        0 8px 12px #5b5d5d0d, 
-        0 0px 2px #5b5d5d32;
-
+        /* 0 8px 12px #5b5d5d0d, */
+        /* 0 0px 2px #5b5d5d32; */
+        0 8px 12px hsla(180, 1%, 36%, 0.051), 
+        0 0px 2px hsla(180, 1%, 36%, 0.196);
 
     font-size: clamp(1rem, 1.25vw, 1.25rem);
     box-sizing: border-box;
     line-height: 1.5;
     word-wrap: break-word;
+
+    --focus-outline: light-dark(var(--primary-100), var(--text-color)) 3px solid;
+    --focus-outline-offset: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -214,7 +224,7 @@ nav {
         margin-inline: 2em;
         height: 0.25em;
         border-radius: 1em;
-        transition: all 0.4s ease;
+        transition: transform 0.4s ease;
     }
 
     li:hover::after {
@@ -329,13 +339,13 @@ header {
     flex-direction: row;
     gap: 1.25em;
     border-radius: var(--corners);
-    outline: var(--outline-decorative);
+    border: var(--outline-decorative);
     padding: 1.5em 2em;  /*  Этот паддинг скрывает иконку, он наследуется свг-шкой */
     text-decoration: none;
     align-items:center;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-
+    
     .icon-wrapper {
         height: calc(var(--icon-size) * 2);
         width: calc(var(--icon-size) * 2);
@@ -444,8 +454,7 @@ header {
         height: 100%;
         transform: translateY(calc(100% - 2px));
 
-
-        background-color: #0a66c2;
+        background-color: var(--primary-100);
         transition: transform 0.3s ease-out;
     }
 
@@ -462,7 +471,7 @@ p + ol {
     position: absolute;
     top: -1000px;
     left: -1000px;
-    background-color: var(--primary-800);
+    background-color: var(--gray-800);
     color: var(--gray-0);
     padding: 1em 1.5em;
     z-index: 1000;
@@ -519,7 +528,8 @@ p + ol {
 
 .project:hover {
     background-color: var(--bg-color);
-    outline-color: var(--outline-color);
+    /* outline-color: var(--outline-color); */
+    border-color: var(--outline-color);
 
     .illustration {
         box-shadow: var(--shadow-color);
@@ -639,7 +649,6 @@ p + ol {
     .icon {
         width: 3em;
         height: 3em;
-        /* fill: var(--gray-500); */
         fill: light-dark(var(--gray-500), var(--gray-300));
     }
 }
@@ -683,36 +692,47 @@ footer {
 }
 
 .csr {
-    --bg-color: light-dark(#f5faff, #16222d);
+    /* --bg-color: light-dark(#f5faff, #16222d);
     --outline-color: light-dark(#c5dbf1, #192f43);
     --shadow-color:
         0 8px 12px #2261950d, 
-        0 0px 2px #1f537632;
+        0 0px 2px #1f537632; */
+
+    --core-color: hsl(200, 94%, 35%);
+    /* The following part is exactly the same for all projects - how to write only once but use in all places? */
+    --bg-color: light-dark(hsl(from var(--core-color) h s 97%), hsl(from var(--core-color) h s 10%));
+    --outline-color: light-dark(hsl(from var(--core-color) h s 85%), hsl(from var(--core-color) h calc(s * 0.8) 20%));
+    --shadow-color:
+        0 8px 12px hsl(from var(--core-color) h s l / 0.1),
+        0 0px 2px hsl(from var(--core-color) h s l / 0.25);
 }
 
 .ehr {    
-    --bg-color: light-dark(#f4fff1, #184d1a);
+    /* --bg-color: light-dark(#f4fff1, #184d1a);
     --outline-color: light-dark(#beecbc, #2e7c2c);
     --shadow-color:
         0 8px 12px #64cb5630,
-        0 0px 2px #63cb5632;
+        0 0px 2px #63cb5632; */
 
+    --core-color: hsl(120, 73%, 40%);
+    --bg-color: light-dark(hsl(from var(--core-color) h s 97%), hsl(from var(--core-color) h s 10%));
+    --outline-color: light-dark(hsl(from var(--core-color) h s 85%), hsl(from var(--core-color) h calc(s * 0.8) 20%));
+    --shadow-color:
+        0 8px 12px hsl(from var(--core-color) h s l / 0.1),
+        0 0px 2px hsl(from var(--core-color) h s l / 0.25);
 }
 
 .lms {
-    --bg-color: light-dark(#fff3e9, #3a1c0a);
-    --outline-color: light-dark(#ffd1b0, #a84c17);
-    --shadow-color:
+    /* --bg-color: light-dark(hsl(27, 100%, 96%), hsl(23, 71%, 13%)); */
+    /* --outline-color: light-dark(#ffd1b0, #a84c17); */
+    /* --shadow-color:
         0 8px 12px #e9680c1a,
-        0 0px 2px #e9680c32;
-
+        0 0px 2px #e9680c32; */
+    
+    --core-color: hsl(26, 95%, 46%);
+    --bg-color: light-dark(hsl(from var(--core-color) h s 97%), hsl(from var(--core-color) h s 10%));
+    --outline-color: light-dark(hsl(from var(--core-color) h s 85%), hsl(from var(--core-color) h calc(s * 0.8) 20%));
+    --shadow-color:
+        0 8px 12px hsl(from var(--core-color) h s l / 0.1),
+        0 0px 2px hsl(from var(--core-color) h s l / 0.25);
 }
-
-/* pink is not used, kept it here just in case */
-/* .pink {
-    --bg-color: light-dark(#fff7fc, #281923);
-    --outline-color: light-dark(#f1cbf4, #461e47);
-    --shadow-color: 
-        0 8px 12px #8622950d,
-        0 0px 2px #681f7632;
-} */
