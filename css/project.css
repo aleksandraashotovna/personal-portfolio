@@ -1,0 +1,150 @@
+@import url('styles.css');
+
+.content-area {
+    --content-max-width: 70ch;
+}
+
+header {
+    /* margin-block: 4em 0; */
+
+    h1 + img {
+        margin-block-start: 2em;
+    }
+}
+
+blockquote {
+    --brand-color: var(--outline-color);
+
+    margin: 4em 0;
+    text-align: center;
+    font-style: italic;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 5em;
+        height: 0.125em;
+        border-radius: 1em;
+        background-color: var(--brand-color);
+        margin: 2em auto;
+    }
+
+    & .quote-source {
+        display: block;
+        margin-top: 1em;
+        font-size: 0.9em;
+        color: var(--text-color-secondary);
+        font-style: normal;
+    }
+}
+
+blockquote + blockquote {
+    margin-top: 0;
+
+    &::before {
+        display: none;
+    }
+}
+
+blockquote:has(+ blockquote) {
+    margin-bottom: 1.5em;
+
+    &::after {
+        display: none;
+    }
+}
+
+figcaption {
+    font-size: 0.8em;
+    color: var(--text-color-secondary);
+    text-align: center;
+    margin-top: 1em;
+}
+
+h2 + h3 {
+    margin-top: 1em;
+}
+
+.data-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+    gap: 2em;
+    margin-block: 2em;
+
+    p,
+    ul {
+        margin: 0;
+    }
+
+    .label {
+        font-weight: bold;
+    }
+
+    .label + ul {
+        margin-block: 0.5em;
+    }
+
+    @media screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+}
+
+.note {
+    font-size: 0.9em;
+    background-color: var(--bg-color);
+    padding: 1em 1.5em;
+    margin-block: 2em;
+    border-radius: calc(var(--corners) / 2);
+    outline: var(--outline-color) 1px solid;
+    display: flex;
+    gap: 1.5em;
+
+    &::before {
+        content: "💡";
+        font-size: 2em;
+    }
+}
+
+.note.nda{
+    &::before{
+        content: "🙈";
+    }
+}
+
+
+
+.illustration-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    margin-block: 2em 3em;
+    
+    img {
+        margin: 0;
+    }
+
+    @media screen and (min-width: 1000px) {
+        margin-inline: -15vw;
+        padding-inline: var(--padding-inline);
+
+        img {
+            border-radius: calc(var(--corners) / 2);
+        }
+    }
+
+    &.columns-2 {
+        @media screen and (min-width: 1000px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &.columns-3 {
+        @media screen and (min-width: 1000px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+}
+

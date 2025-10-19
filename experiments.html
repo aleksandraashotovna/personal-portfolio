@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="content-area">
+        <main id="main">
+            <h1>Different ways of using icons</h1>
+            <h2>Simply icons</h2>
+                <svg>
+                    <use xlink:href="assets/icons.svg#linkedin"></use>
+                </svg>
+                <svg>
+                    <use xlink:href="assets/icons.svg#figma"></use>
+                </svg>
+                <svg>
+                    <use xlink:href="assets/icons.svg#dribbble"></use>
+                </svg>
+            <h2>A link with an icon</h2>
+                <a href="">
+                    <svg aria-hidden="true">
+                        <use xlink:href="assets/icons.svg#figma"></use>
+                    </svg>
+                    Figma
+                </a>
+            <h2>A button with an icon</h2>
+                <button>
+                    <svg aria-hidden="true">
+                        <use xlink:href="assets/icons.svg#dribbble"></use>
+                    </svg>
+                    Dribbble
+                </button>
+
+
+        </main>
+    </div>
+
+    
+</body>
+</html>

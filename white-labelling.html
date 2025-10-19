@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandra Shkurat, UX/UI designer and Team Lead</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/project.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+</head>
+<body>
+
+    <a href="#main" class="skiplink">Skip to content</a>
+    
+    <div class="content-area">
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="/index.html#portfolio">Portfolio</a></li>
+                <li><a href="/index.html#about">About</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main id="main" class="csr">
+            <header>
+                <h1>White-labeling for a Grant Management platform</h1>
+
+                <img src="/assets/projects/csr/csr-cover.jpg" alt="" class="illustration">
+
+                <div class="data-row">
+                    <div>
+                        <p class="label">Role</p>
+                        <p>Lead UX/UI designer</p>
+                    </div>
+                    <div>
+                        <p class="label">Design team</p>
+                        <p>+ 1 junior designer</p>
+                    </div>
+                    <div>
+                        <p class="label">Timeframe</p>
+                        <p>2018–2022</p>
+                    </div>
+                </div>
+
+
+            </header>
+
+            
+
+            <h2>Context</h2>
+                <p>Cold autumn of 2018. I had just started working on a big enterprise platform for Grants Management in the Corporate social responsibility domain that had been on the market for a decade.</p>
+                <div class="note">Corporate social responsibility means running a business in a way that benefits people and the planet while staying accountable to stakeholders.</span></div>
+                <p>The system consists of several parts and connects a number of user roles. One of those roles is an <strong>applicant</strong>, an individual or an organization representative who is requesting some help for themselves or their organization like donations, scholarships, goods, etc. Applicants work on a dedicated website, let’s call it an <strong>applicant portal</strong>, unique for each client.
+                <blockquote>I wish our applicants thought that they’re still on our website<span class="quote-source">— a client representative</span></blockquote>
+                <p>A client pays — the team implements. Aiming to do their best for clients, the team used to start each new theme from a blank artboard. Unsurprisingly, the design concept itself took at least 4 hours to prepare, not to mention communication with a client and further iterations. That all ended up in the following average:</p>
+                <div class="data-row">
+                    <div>
+                        <p class="label">Implementation</p>
+                        <p>16h</p>
+                    </div>
+                    <div>
+                        <p class="label">Design</p>
+                        <p>6h</p>
+                    </div>
+                    <div>
+                        <p class="label">Client communication</p>
+                        <p>From 2h to ∞</p>
+                    </div>
+                </div>
+                <p>That took us 20h for a theme for a single client in total. Moreover, one would never get their theme earlier than 2 weeks after the development starts since the task goes through a standard 2-week Scrum sprint. Sounds ridiculous for changing a logo and a couple of CSS rules, doesn’t it?</p>
+                <p>I couldn’t keep up with that and decided to take at least baby steps to make the process easier and the system scalable.</p>
+
+            <h2>Process & findings</h2>
+                <h3>Desk research</h3>
+                <p>I explored best practices for white-labeling and existing solutions, but the final scope of the allowed changes was inspired by our clients. The design team manually analyzed all the themes ever created and a dozen of recent requirements. What for? We have a bunch of stakeholders, and each of them wanted to contribute to the scope, I’ll cite a couple:</p>
+                <blockquote>All our clients crave for a custom font, they won’t ever sign without it</blockquote>
+                <blockquote>Our product is extremely unique, you won’t manage to unify the themes. Half of our clients request a custom layout, we won’t survive without this opportunity</blockquote>
+                <p>The desk research revealed the following insights:</p>
+                <ul>
+                    <li>The most popular things our clients ask us to change are their logo, links & buttons style, and background.</li>
+                    <li>Clients were asked to provide their font by Client Success Managers (CSMs). No more than 1 of 20 clients aked about changing the font themselves.</li>
+                    <li>There’s an only client with a custom layout; others never ask for it unless CSM has shown them that one as an example.</li>
+                    <li>The intent to choose accessible platforms over inaccessible ones is constantly growing.</li>
+                </ul>
+                <figure>
+                    <img src="/assets/projects/csr/csr_themes_analysis.webp" alt="Themes analysis report">
+                    <figcaption>A piece of the themes analysis report</figcaption>
+                </figure>
+
+                <h3>Go to the field</h3>
+                <p>For 2 months the design team was handling client requirements along with the Client Success Team (CST), from gathering requirements to a theme presentation. This first-hand experience let me understand the tasks and struggles CST came up with during the client onboarding process.</p>
+                <p>Some insights</p>
+                <ul>
+                    <li>As far as this work is custom development, CST and Sales gradually got a card blanchè to promise a client anything they would ever ask. There’s no surprise, as these teams benefit from each closed deal and ticket and are pretty far from the product development roadmap.</li>
+                    <li>CST and Sales lacked a single source of truth. People made their own templates and questionnaires, nobody knew what was allowed or possible within a theme.</li>
+                    <li>High customization resulted in poor accessibility and maintenance. We used to have unique CSS stylesheets for each client, which made any system-wide UI updates almost impossible or cost a fortune.</li>
+                    <li>This’s not a good idea to customize your font. Firstly, clients didn’t care much about their font license. Secondly, optical size and baseline may differ quite dramatically and consequently ruin your grouping and hierarchy. Finally, changing OpenSans to Helvetica (one sans serif to another sans serif) doesn’t make any dramatic difference.</li>
+                    <!-- <li>Developers didn’t like building themes since they couldn’t learn much and contribute to the product.</li> -->
+                </ul>
+
+            <h2>Design solution</h2>
+                <p>After a thorough analysis, possible white-labeled parameters were divided into 3 groups based on their impact and dev effort:</p>
+                    <div class="data-row">
+                        <div>
+                            <p class="label">Configure</p>
+                            <ul>
+                                <li>Logo</li>
+                                <li>Accent color</li>
+                                <li>Link color</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="label">Nice to have</p>
+                            <ul>
+                                <li>Page background</li>
+                                <li>Favicon</li>
+                                <li>Corner radius</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="label">Avoid customizing</p>
+                            <ul>
+                                <li>Font</li>
+                                <li>Layout</li>
+                                <li>Basic color palette</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <p>!!! An image with arrows</p> -->
+
+                    <p>In addition, a client may change not only a theme for their portal but configure content as well. See how it works for the login page:</p>
+                    <div class="illustration-grid columns-2">
+                        <figure>
+                            <img src="/assets/projects/csr/csr-theme_login_base.jpg" alt="Login page of the applicant portal, basic theme" class="illustration">
+                            <figcaption>Basic theme</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/assets/projects/csr/csr_theme_login_figma.jpg" alt="Login page of the applicant portal, a fictional theme for Figma" class="illustration">
+                            <figcaption>Figma</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/assets/projects/csr/csr-theme_login_mailchimp.jpg" alt="Login page of the applicant portal, a fictional theme for Mailchimp" class="illustration">
+                            <figcaption>Mailchimp</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/assets/projects/csr/csr-theme_login_starbucks.jpg" alt="Login page of the applicant portal, a fictional theme for Starbucks" class="illustration">
+                            <figcaption>Starbucks</figcaption>
+                        </figure>
+                    </div>
+
+                    <p class="note nda">Note that the concept themes are fictional, as far as I’m not allowed to reveal the real clients. All the names, logos, and photos belong to their owners. All texts are fictional.</p>
+                    <p>To show a theme to a client, a designer creates mockups in Figma for 3 most popular pages an applicant visits most often:</p>
+                    <div class="illustration-grid columns-3">
+                        <figure>
+                            <img src="/assets/projects/csr/csr-theme_login_base.jpg" alt="Login page of the applicant portal, basic theme" class="illustration">
+                            <figcaption>Login page</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/assets/projects/csr/csr-theme_home_base.jpg" alt="Home page of the applicant portal, basic theme" class="illustration">
+                            <figcaption>Home page</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/assets/projects/csr/csr-theme_form_base.jpg" alt="An application form, basic theme" class="illustration">
+                            <figcaption>Application form</figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- <p>!!! An example of a file that is given for approval to a customer</p> -->
+
+                    <p>I also created a concept for a theme configurator to eliminate the development and QA effort in the client onboarding process.</p>
+                    <!-- <p>!!! Theme configurator</p> -->
+                    <p>An essential part of the configurator is <strong>a built-in accessibility color checker</strong>. As far as majority of our clients aren’t much into web development, we have to guide them to create an appropriate experience for their applicants.</p>
+
+            <h2>Continuous improvements</h2>
+                    <p>Throughout 4 years the white-labeling process came through the following stages:</p>
+                    <ul>
+                        <li>Each theme started from scratch.</li>
+                        <li>Basic template in Figma and its implementation in code.</li>
+                        <li>A guide for the Client Success team and a survey for clients.</li>
+                        <li>Accessibility refinement. My team analyzed the basic template and a dozen client themes to prepare a complete guide for developers and QAs. Also, I led 3 internal educational events on accessibility.</li>
+                    </ul>
+
+                
+            <h2>Teamwork & Leadership</h2>
+                <p>In December 2020 I took on the role of Lead UX/UI Designer at Eurovensys and became responsible for the design team. I hired two more junior designers, one of them for this product. With ready-to-use Figma templates and clear guidelines for Client Success Managers, onboarding was quick, and the new designer started delivering client themes quickly.</p>
+                <blockquote>I want to note Aleksandra’s professionalism and perfect knowledge of the project on which we worked. I have always received constructive feedback on my work which was crucial for my professional growth.<span class="quote-source">— Vera Yuzefovich, UX/UI designer at Eurovensys</span></blockquote>
+                <p>The process I set up ensured scalability and consistent high quality of themes, no matter who was working on them. This also reduced my own workload and gave me space to define strategy and lead a design team for another product — <strong>Remedly</strong>, a cloud-based EHR/EMR platform for healthcare.</p>
+                <p>Client themes turned out to be a great entry task for a junior: it gave them confidence, independence, and a clear sense of how a systematic design approach pays off. Over the next two years we shipped dozens of themes, and I was there to support the team in tricky situations and make sure our work stayed aligned with the bigger product vision.</p>
+
+            <h2>Impact</h2>
+                <ul>
+                    <li>The average effort has decreased from 24h to about 12h per theme.</li>
+                    <li>In 2018 we needed 3 iterations on average to confirm a theme with a client. By the end of 2022, this rate had dropped to 1.8.</li>
+                    <li>The % of theming-related tasks in the backlog has dropped (based on story points).</li>
+                </ul>
+
+            <h2>Afterword</h2>
+                <p>In this project, I was able to leverage my skills in UX/UI design, team leadership, and client communication. However, this project is only one of many I led while working on this product. Some others:</p>
+                <ul>
+                    <li>I built design guidelines, UI-kit and page templates from scratch, based on the existing design.</li>
+                    <li>After the product was acquired, I led implementation of the owner's design system, <a class="text-link" href="https://skyline.benevity.org/design/" rel="noopener noreferrer" target="_blank">Skyline by Benevity</a>.</li>
+                    <li>I conducted the 1st internal accessibility audit for the platform back in 2020 and ensured that any new implementation met WCAG 2.0 AA requirements. When the product was audited by LevelAccess in July 2022, we received positive feedback on our efforts.</li>
+                </ul>
+                <figure>
+                    <img src="/assets/projects/csr/csr-cover.jpg" alt="" class="illustration">
+                    <figcaption>Application page in the grant management platform, the main place for grant managers to work</figcaption>
+                </figure>
+
+        </main>
+
+        <footer>
+            <p>This website is designed and coded by Aleksandra Shkurat</p>
+        </footer>
+        
+    </div>
+    
+</body>
+</html>

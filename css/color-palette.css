@@ -1,0 +1,25 @@
+:root {
+  /* https://coolors.co/2b2f33-484c4f-65686c-828588-a0a1a4-bdbec0-dadadd-f7f7f9 */
+  --gray-0: #ffffff;
+  --gray-100: #F7F7F9;
+  --gray-150: #F0F0F5;
+  --gray-200: #D6D6D8;
+  --gray-300: #B5B6B8;
+  --gray-400: #949597;
+  --gray-500: #737476;
+  --gray-600: #525355;
+  --gray-700: #313335;
+  --gray-750: #242628;
+  --gray-800: #101214;
+
+    /* https://coolors.co/4c0c89-611d9a-762eab-8b3fbc-a151cc-b662dd-cb73ee-e084ff */
+  --primary-100: #E084FF;
+  --primary-200: #CB73EE;
+  --primary-300: #B662DD;
+  --primary-400: #A151CC;
+  --primary-500: #8B3FBC;
+  --primary-600: #762EAB;
+  --primary-700: #611D9A;
+  --primary-800: #4C0C89;
+
+}
