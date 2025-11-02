@@ -28,11 +28,8 @@
 
     --corners: clamp(0.5em, 2vw, 1em);
     --shadow: 
-        /* 0 8px 12px #5b5d5d0d; */
         0 8px 12px hsla(180, 1%, 36%, 0.051);
-    --shadow-images: 
-        /* 0 8px 12px #5b5d5d0d, */
-        /* 0 0px 2px #5b5d5d32; */
+    --shadow-images:
         0 8px 12px hsla(180, 1%, 36%, 0.051), 
         0 0px 2px hsla(180, 1%, 36%, 0.196);
 
@@ -110,16 +107,29 @@ p {
     max-width: 80ch;
 }
 
-h1:has(+ p),
-h2:has(+ p) {
+h1 + p {
+    margin-top: 0.5em;
+}
+
+h2 + p {
+    margin-top: 1.5em;
+}
+
+h3 + p {
+    margin-top: 1em;
+}
+
+
+/* h1:has(+ p){
     margin-bottom: 0.25em;
-}
+} */
 
-h3:has(+ p) {
-    margin-bottom: 1em;
-}
+/* h2:has(+ p) {
+    margin-bottom: 0.25em;
+} */
 
-p + p {
+p + p,
+a + p {
     margin-top: 1em;
 }
 
@@ -431,6 +441,14 @@ header {
     }
 }
 
+.link-block + p {
+    margin-top: 2em;
+}
+
+p + .link-block {
+    margin-top: 2em;
+}
+
 p + ul,
 p + ol {
     margin-top: 0;
@@ -497,7 +515,6 @@ p + ol {
 
 .project:hover {
     background-color: var(--bg-color);
-    /* outline-color: var(--outline-color); */
     border-color: var(--outline-color);
 
     .illustration {
@@ -587,6 +604,17 @@ p + ol {
         grid-column: span 3;
     }
 }
+
+@media screen and (width > 800px) {
+    .link-block.dribbble {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+
 
 @media screen and (max-width: 480px) {
     .contacts-grid {
