@@ -23,15 +23,13 @@
     --text-color-secondary: var(--gray-600);
     --text-color-inverted: var(--gray-0);
 
-    /* Find a better way to include into the palette */
-    --outline-decorative: 1px solid rgb(181, 182, 184, 0.2);
-
     --corners: clamp(0.5em, 2vw, 1em);
+
     --shadow: 
-        0 8px 12px hsla(180, 1%, 36%, 0.051);
+        0 8px 12px hsl(from var(--gray-800) h s l / 0.05);
     --shadow-images:
-        0 8px 12px hsla(180, 1%, 36%, 0.051), 
-        0 0px 2px hsla(180, 1%, 36%, 0.196);
+        0 8px 20px hsl(from var(--gray-800) h s l / 0.05),
+        0 0px 2px hsl(from var(--gray-800) h s l / 0.15);
 
     font-size: clamp(1rem, 1.25vw, 1.25rem);
     box-sizing: border-box;
@@ -365,8 +363,8 @@ header {
     flex-direction: row;
     gap: 1.25em;
     border-radius: var(--corners);
-    border: var(--outline-decorative);
-    padding: 1.5em 2em;  /*  Этот паддинг скрывает иконку, он наследуется свг-шкой */
+    border: 1px solid hsl(from var(--gray-200) h s l / 0.5);
+    padding: 1.5em 2em;
     text-decoration: none;
     align-items:center;
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
@@ -375,12 +373,12 @@ header {
     .icon-wrapper {
         height: calc(var(--icon-size) * 2);
         width: calc(var(--icon-size) * 2);
-        padding: 1em;
+        padding: calc(var(--icon-size) / 2);
         background-color: var(--bg-main);
         border-radius: 4rem;
-        outline: var(--outline-decorative);  
+        outline: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), var(--gray-600));
+
         box-shadow: var(--shadow);
-        /* overflow: hidden; - it makes the icon-wrapper shrink horizontally, there is a weird nesting of padding-inline from the content area */
     }
 
     .icon {
@@ -513,7 +511,7 @@ p + ol {
     }
 }
 
-.project:hover {
+.color-coded:hover {
     background-color: var(--bg-color);
     border-color: var(--outline-color);
 
@@ -635,11 +633,11 @@ p + ol {
     height: 100%;
 
     &:hover {
-        background-color: var(--unique-color);
-        color: var(--gray-0);
+        background-color: var(--bg-color);
+        border-color: var(--outline-color);
         
         .icon {
-            fill: currentColor;
+            fill: light-dark(var(--core-color), var(--gray-0));
         }
     }
 
@@ -671,65 +669,4 @@ footer {
     &:hover p::after {
         content: "🥰";
     }
-}
-
-
-/* Color coding & branding */
-
-.linkedin {
-    --unique-color: #0a66c2;
-}
-
-.dribbble {
-    --unique-color: #ea4c89;
-}
-
-.figma {
-    --unique-color: #5551ff;
-}
-
-.csr {
-    /* --bg-color: light-dark(#f5faff, #16222d);
-    --outline-color: light-dark(#c5dbf1, #192f43);
-    --shadow-color:
-        0 8px 12px #2261950d, 
-        0 0px 2px #1f537632; */
-
-    --core-color: hsl(200, 94%, 35%);
-    /* The following part is exactly the same for all projects - how to write only once but use in all places? */
-    --bg-color: light-dark(hsl(from var(--core-color) h s 97%), hsl(from var(--core-color) h s 10%));
-    --outline-color: light-dark(hsl(from var(--core-color) h s 85%), hsl(from var(--core-color) h calc(s * 0.8) 20%));
-    --shadow-color:
-        0 8px 12px hsl(from var(--core-color) h s l / 0.1),
-        0 0px 2px hsl(from var(--core-color) h s l / 0.25);
-}
-
-.ehr {    
-    /* --bg-color: light-dark(#f4fff1, #184d1a);
-    --outline-color: light-dark(#beecbc, #2e7c2c);
-    --shadow-color:
-        0 8px 12px #64cb5630,
-        0 0px 2px #63cb5632; */
-
-    --core-color: hsl(120, 73%, 40%);
-    --bg-color: light-dark(hsl(from var(--core-color) h s 97%), hsl(from var(--core-color) h s 10%));
-    --outline-color: light-dark(hsl(from var(--core-color) h s 85%), hsl(from var(--core-color) h calc(s * 0.8) 20%));
-    --shadow-color:
-        0 8px 12px hsl(from var(--core-color) h s l / 0.1),
-        0 0px 2px hsl(from var(--core-color) h s l / 0.25);
-}
-
-.lms {
-    /* --bg-color: light-dark(hsl(27, 100%, 96%), hsl(23, 71%, 13%)); */
-    /* --outline-color: light-dark(#ffd1b0, #a84c17); */
-    /* --shadow-color:
-        0 8px 12px #e9680c1a,
-        0 0px 2px #e9680c32; */
-    
-    --core-color: hsl(26, 95%, 46%);
-    --bg-color: light-dark(hsl(from var(--core-color) h s 97%), hsl(from var(--core-color) h s 10%));
-    --outline-color: light-dark(hsl(from var(--core-color) h s 85%), hsl(from var(--core-color) h calc(s * 0.8) 20%));
-    --shadow-color:
-        0 8px 12px hsl(from var(--core-color) h s l / 0.1),
-        0 0px 2px hsl(from var(--core-color) h s l / 0.25);
 }

@@ -1,17 +1,64 @@
 /* This file contains main colors for the website */
 
 :root {
-  --gray-0: #ffffff;
-  --gray-100: #F7F7F9;
-  --gray-150: #F0F0F5;
-  --gray-200: #D6D6D8;
-  --gray-300: #B5B6B8;
-  --gray-400: #949597;
-  --gray-500: #737476;
-  --gray-600: #525355;
-  --gray-700: #313335;
-  --gray-750: #242628;
-  --gray-800: #101214;
+  --gray-0: hsl(0 0% 100%);
+  --gray-100: hsl(240 14% 97%);
+  --gray-150: hsl(240 20% 95%);
+  --gray-200: hsl(240 2% 84%);
+  --gray-300: hsl(220 2% 72%);
+  --gray-400: hsl(220 1% 59%);
+  --gray-500: hsl(220 1% 46%);
+  --gray-600: hsl(220 2% 33%);
+  --gray-700: hsl(210 4% 20%);
+  --gray-750: hsl(210 5% 15%);
+  --gray-800: hsl(210 11% 7%);
 
-  --primary-100: #0a66c2;
+  --primary-100: hsl(210 90% 40%);
+}
+
+/* Color coding & branding */
+
+.linkedin {
+  --core-color: hsl(210 90% 40%);
+}
+
+.dribbble {
+  --core-color: hsl(337 79% 61%);
+}
+
+.figma {
+  --core-color: hsl(241 100% 66%);
+}
+
+.csr {
+  --core-color: hsl(200 94% 35%);
+}
+
+.ehr {
+  --core-color: hsl(120 73% 40%);
+}
+
+.lms {
+  --core-color: hsl(26 95% 46%);
+}
+
+.linkedin,
+.dribbble,
+.figma,
+.csr,
+.ehr,
+.lms {
+  --bg-color: light-dark(
+    hsl(from var(--core-color) h s 97%), 
+    hsl(from var(--core-color) h s 10%)
+  );
+
+  --outline-color: light-dark(
+    hsl(from var(--core-color) h s 85%), 
+    hsl(from var(--core-color) h calc(s * 0.8) 20%)
+  );
+
+  --shadow-color:
+    0 8px 20px hsl(from var(--core-color) h s l / 0.15),
+    0 0px 2px hsl(from var(--core-color) h s l / 0.2);
 }
