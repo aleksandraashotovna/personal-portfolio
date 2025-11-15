@@ -55,12 +55,18 @@ blockquote:has(+ blockquote) {
     }
 }
 
-figcaption {
-    font-size: 0.8em;
-    color: var(--text-color-secondary);
-    text-align: center;
-    margin-top: 1em;
+.illustration-with-caption {
+    margin-block: 2em 3em;
+
+    figcaption {
+        font-size: 0.875em;
+        color: var(--text-color-secondary);
+        text-align: center;
+        margin-top: 1em;
+    }
 }
+
+
 
 h2 + h3 {
     margin-top: 1em;
@@ -140,10 +146,14 @@ h2 + h3 {
         }
     }
 
-    &.columns-3 {
+    /* &.columns-3 {
         @media screen and (min-width: 1000px) {
             grid-template-columns: repeat(3, 1fr);
         }
+    } */
+
+    .illustration-with-caption {
+        margin-block: 0;
     }
 
 }
