@@ -348,6 +348,7 @@ header {
         outline: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), var(--gray-600));
 
         box-shadow: var(--shadow);
+        transition: box-shadow 0.3s ease;
     }
 
     .icon {
