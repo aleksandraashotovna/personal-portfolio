@@ -76,7 +76,7 @@ h2 + h3 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
     gap: 2em;
-    margin-block: 2em;
+    /* margin-block: 2em; */
 
     p,
     ul {
@@ -95,6 +95,14 @@ h2 + h3 {
         grid-template-columns: 1fr;
         gap: 1em;
     }
+
+    
+}
+
+.data-row + p,
+.data-row:has(+ p),
+p + .data-row {
+    margin-block-start: 2em;
 }
 
 .note {
@@ -156,5 +164,10 @@ h2 + h3 {
         margin-block: 0;
     }
 
+}
+
+.subtitle {
+    /* font-size: 1.25em; */
+    margin-block-start: 1.5em;
 }
 
