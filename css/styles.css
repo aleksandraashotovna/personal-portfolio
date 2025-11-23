@@ -177,7 +177,7 @@ main a:is(:not(.link-block)) {
     text-decoration-skip-ink: none;
     text-underline-offset: 0.125em;
 
-    &[target="_blank"]::after {
+    /* &[target="_blank"]::after {
         content: "↗";
         display: inline-block;
         margin-inline: 0.125em;
@@ -188,7 +188,7 @@ main a:is(:not(.link-block)) {
 
     &[target="_blank"]:hover::after {
         transform: rotate(45deg);
-    }
+    } */
 }
 
 
