@@ -301,7 +301,7 @@ header {
 }
 
 
-/* Speaking & teaching */
+/* About */
 
 .videos {
     display: grid;
@@ -316,6 +316,18 @@ header {
     }
 
     @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4em;
+    align-items: start;
+    margin-block-start: 1em;
+
+    @media (max-width: 800px) {
         grid-template-columns: 1fr;
     }
 }
