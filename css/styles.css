@@ -323,12 +323,16 @@ header {
 .about-columns {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 4em;
+    gap: clamp(2em, 4vw, 4em);
     align-items: start;
     margin-block-start: 1em;
 
     @media (max-width: 800px) {
         grid-template-columns: 1fr;
+
+        .about-portrait {
+            display: none;
+        }
     }
 }
 
