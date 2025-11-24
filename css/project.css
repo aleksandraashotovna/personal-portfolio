@@ -64,7 +64,6 @@ h2 + h3 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
     gap: 1.5em;
-    /* margin-block: 2em; */
 
     p,
     ul {
@@ -124,12 +123,6 @@ p + .data-row {
     img {
         margin: 0;
     }
-
-    /* @media screen and (min-width: 1000px) {
-        margin-inline: -15vw;
-        padding-inline: var(--padding-inline);
-    } */
-
     
     @media screen and (min-width: 1000px) {
         grid-template-columns: repeat(2, 1fr);
@@ -138,7 +131,6 @@ p + .data-row {
     .illustration-with-caption {
         margin-block: 0;
     }
-
 }
 
 .subtitle {
