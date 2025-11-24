@@ -13,7 +13,8 @@
   --gray-750: hsl(210 5% 15%);
   --gray-800: hsl(210 11% 7%);
 
-  --primary-100: hsl(210 90% 40%);
+  --primary-100: hsl(214, 59%, 77%);
+  --primary-500: hsl(210, 90%, 40%);
 }
 
 /* Color coding & branding */
