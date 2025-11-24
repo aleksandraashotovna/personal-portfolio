@@ -24,7 +24,8 @@
     --text-color-secondary: var(--gray-600);
     --text-color-inverted: var(--gray-0);
 
-    --corners: clamp(0.5em, 2vw, 1em);
+    /* --corners: clamp(0.5em, 2vw, 1em); */
+    --corners: 0.5em;
 
     --shadow: 
         0 8px 12px hsl(from var(--gray-800) h s l / 0.05);
@@ -151,6 +152,10 @@ ol + figure {
 p + ul,
 p + ol {
     margin-top: 0;
+}
+
+abbr {
+    text-decoration: none;
 }
 
 .visually-hidden {

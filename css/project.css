@@ -1,13 +1,5 @@
 @import url('styles.css');
 
-header {
-    /* margin-block: 4em 0; */
-
-    h1 + img {
-        margin-block-start: 2em;
-    }
-}
-
 blockquote {
     --brand-color: var(--outline-color);
 
@@ -71,7 +63,7 @@ h2 + h3 {
 .data-row {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
-    gap: 2em;
+    gap: 1.5em;
     /* margin-block: 2em; */
 
     p,
@@ -80,25 +72,20 @@ h2 + h3 {
     }
 
     .label {
-        font-weight: bold;
+        font-size: 0.75em;
+        color: var(--text-color-secondary);
+        margin-block-end: 0.25rem;
     }
 
     .label + ul {
         margin-block: 0.5em;
     }
-
-    @media screen and (max-width: 640px) {
-        grid-template-columns: 1fr;
-        gap: 1em;
-    }
-
-    
 }
 
 .data-row + p,
 .data-row:has(+ p),
 p + .data-row {
-    margin-block-start: 2em;
+    margin-block-start: 1.5em;
 }
 
 .note {
@@ -163,7 +150,26 @@ p + .data-row {
 }
 
 .subtitle {
-    /* font-size: 1.25em; */
     margin-block-start: 1.5em;
+}
+
+.project-header {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2.5em 4em;
+
+    align-items: center;
+    justify-self: center;
+    grid-column: breakout-start / breakout-end;
+    max-width: 120ch;
+
+    @media screen and (min-width: 1001px) and (max-width: 1400px) {
+        margin-right: -20rem;
+    }
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        grid-column: content-start / content-end;
+    }
 }
 
