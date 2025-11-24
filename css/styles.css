@@ -139,7 +139,7 @@ img {
         box-shadow: var(--shadow-images);
 
         &.border-radius-big {
-            border-radius: clamp(0.5em, 2vw, 1em);
+            border-radius: 1em;
         }
     }
 }
@@ -358,7 +358,7 @@ header {
     display: flex;
     flex-direction: row;
     gap: 1.25em;
-    border-radius: clamp(0.5em, 2vw, 1em);
+    border-radius: 1em;
     border: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), hsl(from var(--gray-600) h s l / 0.5));
     padding: 1.5em 2em;
     text-decoration: none;
