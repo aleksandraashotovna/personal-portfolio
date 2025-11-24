@@ -497,14 +497,18 @@ p + .link-block {
     }
 }
 
-@media screen and (width > 800px) {
+.link-block.dribbble {
+    grid-column: span 2;
+}
+
+/* @media screen and (width > 800px) {
     .link-block.dribbble {
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
     }
-}
+} */
 
 @media screen and (max-width: 480px) {
     .contacts-grid {
@@ -516,6 +520,7 @@ p + .link-block {
         display: flex;
         flex-direction: column;
         text-align: center;
+        padding-block: 2.5em;
     }
 }
 
