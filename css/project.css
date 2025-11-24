@@ -1,9 +1,5 @@
 @import url('styles.css');
 
-.content-area {
-    --content-max-width: 70ch;
-}
-
 header {
     /* margin-block: 4em 0; */
 
