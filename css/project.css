@@ -93,7 +93,7 @@ p + .data-row {
     background-color: var(--bg-color);
     padding: 1em 1.5em;
     margin-block: 2em;
-    border-radius: calc(var(--corners) / 2);
+    border-radius: 0.5rem;
     outline: var(--outline-color) 1px solid;
     display: flex;
     gap: 1.5em;
@@ -116,32 +116,24 @@ p + .data-row {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5em;
+    grid-column: breakout-start / breakout-end;
+    max-width: 120ch;
+    justify-self: center;
     margin-block: 2em 3em;
     
     img {
         margin: 0;
     }
 
-    @media screen and (min-width: 1000px) {
+    /* @media screen and (min-width: 1000px) {
         margin-inline: -15vw;
         padding-inline: var(--padding-inline);
-
-        img {
-            border-radius: calc(var(--corners) / 2);
-        }
-    }
-
-    &.columns-2 {
-        @media screen and (min-width: 1000px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    /* &.columns-3 {
-        @media screen and (min-width: 1000px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
     } */
+
+    
+    @media screen and (min-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .illustration-with-caption {
         margin-block: 0;
