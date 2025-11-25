@@ -21,7 +21,7 @@ blockquote {
     & .quote-source {
         display: block;
         margin-top: 1em;
-        font-size: 0.9em;
+        font-size: 0.875em;
         color: var(--text-color-secondary);
         font-style: normal;
     }
@@ -88,7 +88,7 @@ p + .data-row {
 }
 
 .note {
-    font-size: 0.9em;
+    font-size: 0.875em;
     background-color: var(--bg-color);
     padding: 1em 1.5em;
     margin-block: 2em;

@@ -408,7 +408,7 @@ header {
 
         p:is(:nth-child(2)) {
             padding-block-start: 0.25em;
-            font-size: 0.9em;
+            font-size: 0.875em;
         }
     }
 
