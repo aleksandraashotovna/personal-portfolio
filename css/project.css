@@ -54,8 +54,6 @@ blockquote:has(+ blockquote) {
     }
 }
 
-
-
 h2 + h3 {
     margin-top: 1em;
 }
@@ -109,11 +107,9 @@ p + .data-row {
     }
 }
 
-
-
 .illustration-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5em;
     grid-column: breakout-start / breakout-end;
     max-width: 120ch;
@@ -123,9 +119,10 @@ p + .data-row {
     img {
         margin: 0;
     }
-    
-    @media screen and (min-width: 1000px) {
-        grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        grid-column: content-start / content-end;
     }
 
     .illustration-with-caption {
