@@ -172,23 +172,27 @@ p + .data-row {
     @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;
     }
+}
 
-    .impact-card {
-        border-radius: 1em;
-        border: 1px solid light-dark(var(--gray-200), var(--gray-600));
-        padding: 1.5em 2em;
+.impact-card {
+    border-radius: 1em;
+    border: 1px solid light-dark(var(--gray-200), var(--gray-600));
+    padding: 1em 2em 1.5em;
 
-        h3 {
-            margin-block-start: 0;
-        }
+    .impact-icon {
+        font-size: 2.5em;
+    }
 
-        ul {
-            margin-block: 1em 0;
-        }
+    h3 {
+        margin-block-start: 0.5em;
+    }
 
-        p {
-            margin-block: 0;
-        }
+    ul {
+        margin-block: 1em 0;
+    }
+
+    p {
+        margin-block: 0.5em 0;
     }
 }
 
