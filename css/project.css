@@ -169,6 +169,10 @@ p + .data-row {
     gap: 1.25em;
     margin-block-start: 1.5em;
 
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+
     .impact-card {
         border-radius: 1em;
         border: 1px solid light-dark(var(--gray-200), var(--gray-600));
@@ -180,6 +184,10 @@ p + .data-row {
 
         ul {
             margin-block: 1em 0;
+        }
+
+        p {
+            margin-block: 0;
         }
     }
 }
