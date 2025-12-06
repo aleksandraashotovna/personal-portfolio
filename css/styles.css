@@ -79,11 +79,11 @@ body {
 }
 
 .content-area > * {
-    grid-column: content; /* shorthand for content-start / content-end */
+    grid-column: content-start / content-end;
 }
 
-.content-area > .breakout {
-    grid-column: breakout; /* shorthand for breakout-start / breakout-end */
+.breakout {
+    grid-column: breakout-start / breakout-end;
     max-width: 120ch;
 }
 
@@ -133,7 +133,7 @@ img {
 
     &.illustration {
         border-radius: 0.5em;
-        width: 100%;
+        max-width: 100%;
         height: auto;
         object-fit: cover;
         box-shadow: var(--shadow-images);
@@ -144,15 +144,9 @@ img {
     }
 }
 
-p + figure,
-ul + figure,
-ol + figure {
-    margin-top: 2em;
-}
-
 p + ul,
 p + ol {
-    margin-top: 0;
+    margin-block-start: 0;
 }
 
 abbr {
