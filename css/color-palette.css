@@ -14,7 +14,7 @@
   --gray-800: hsl(210 11% 7%);
 
   --primary-100: hsl(214, 59%, 77%);
-  --primary-500: hsl(210, 90%, 40%);
+  --primary-500: lch(43.45% 55.91 281.98);
 }
 
 /* Color coding & branding */

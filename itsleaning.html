@@ -51,13 +51,15 @@
                 <h2>Context & Challenges</h2>
                     <p class="note">itslearning is a large European Learning Management System (LMS) with a 25 year long history that serves millions of teachers and students across K-12, higher and vocational education in 10+ markets.</p>
 
-                    <p>When I joined, the key challenges were clear:</p>
+                    <p>When I joined, I approached the product with this vision: <strong>keep</strong> what works, <strong>evolve</strong> what’s valuable, and <strong>remove</strong> the legacy and silos slowing it down.</p>
+
+                    <p>After a quick but thorough assessment, I identified several foundational challenges:</p>
                     <ul>
                         <li>A design system in place, but ignored by development teams</li>
-                        <li>No shared design vision within the product organization</li>
-                        <li>UX designers embedded into development teams and bearely communicating</li>
-                        <li>UX team and developers in conflict, unable to align on accessibility decisions</li>
-                        <li>Native apps for iOS and Android built without any design system principles</li>
+                        <li>No shared design vision across product, UX, and engineering</li>
+                        <li>UX designers were embedded in dev teams with almost no cross-team communication</li>
+                        <li>UX and engineering were stuck in a long-running conflict around accessibility decisions</li>
+                        <li>Native mobile apps for iOS and Android built without any design system principles and connection to the web platform</li>
                     </ul>
                     <p>The team needed structure, a strategy, and a system-first approach to product development.</p>
 
@@ -89,7 +91,12 @@
                             <figcaption>Core layout template</figcaption>
                         </figure>
 
-                        <p>The content area width adapts depending on the content of each page: <strong>Narrow</strong> for forms and rich text, <strong>Wide</strong> for tables and structured data, and <strong>Full</strong> for cards and large datasets.</p>
+                        <p>The content area maximum width can be limited, a limitation is chosen by a UX designer depending on the content of a page: 
+                            <ul>
+                                <li><strong>Narrow</strong> for forms and rich text</li>
+                                <li><strong>Wide</strong> for tables and structured data</li>
+                                <li><strong>Full</strong> for cards and large datasets</li>
+                            </ul>
 
                         <figure class="illustration-with-caption">
                             <img src="assets/projects/lms/lms-course-cards-student.jpg" alt="List of courses, course cards are in a 5 column grid" class="illustration">
@@ -103,7 +110,7 @@
                         
                         <figure class="illustration-with-caption">
                             <img src="assets/projects/lms/lms-profile-student.jpg" alt="Narrow content area" class="illustration">
-                            <figcaption>Narrow: Textual information require a line length limitation for readability</figcaption>
+                            <figcaption>Narrow example: Textual information require a line length limitation for readability</figcaption>
                         </figure>
                         
                         <p>The template is fully responsive and ensures that every new page scales smoothly to tablets and mobile.</p>
@@ -145,17 +152,21 @@
                                 <li>Enocuraging contribution and system thinking in UX designers</li>
                                 <li>Improving and simplifying component documentation</li>
                             </ul>
-                        <p>As a result, adoption of the Prometheus design system increased and delivery became faster and more consistent.</p>
 
-                        <figure class="illustration-with-caption">
-                            <img src="assets/projects/lms/lms-ui-kit-components.jpg" alt="Figma components from the LMS UI-kit" class="illustration">
-                            <figcaption>Some compoents from the LMS UI-kit</figcaption>
-                        </figure>
+                            
+                            <figure class="illustration-with-caption">
+                                <img src="assets/projects/lms/lms-ui-kit-components.jpg" alt="Figma components from the LMS UI-kit" class="illustration">
+                                <figcaption>Some components from the LMS UI-kit</figcaption>
+                            </figure>
+                            
+                            <figure class="illustration-with-caption">
+                                <img src="assets/projects/lms/lms-figmaguide-emptystate.jpg" alt="Built-in guidelines for the Empty State component in Figma" class="illustration">
+                                <figcaption>Built-in guidelines for designers in Figma (Empty State component as an example)</figcaption>
+                            </figure>
+                            
+                            <p>As a result, adoption of the Prometheus design system increased and delivery became faster and more consistent.</p>
 
-                        <figure class="illustration-with-caption">
-                            <img src="assets/projects/lms/lms-figmaguide-emptystate.jpg" alt="Built-in guidelines for the Empty State component in Figma" class="illustration">
-                            <figcaption>Built-in guidelines for designers in Figma (Empty State component as an example)</figcaption>
-                        </figure>
+                            <blockquote>Actually, we built this page without writing a single line of CSS.<span class="quote-source">— Alexander Ivanov, a development team lead at itslearning</span></blockquote>
 
                     <h3>Revamped Navigation & Information Architecture</h3>
                         <p>When I joined, the main navigation was one of the most problematic areas in itslearning. Several accessibility audits and an official complaint in one of the market showed that the main menu was nearly impossible to use with a keyboard, complex and not understandable. School admins could also add endless custom items to the menu, sometimes up to 20, and there were not reachable.</p>
@@ -200,25 +211,34 @@
                         <p>This system has been in place for about two years now. Not a single new color has been added to this palette, and questions about color usage have essentially disappeared, proving the clarity and sustainability of the new structure.</p>
 
                     <h3>Overhauled Icon System</h3>
-                        <p>I replaced the entire iconography layer across the product:</p>
-                            <ul>
-                                <li>Introduced a unified icon style</li>
-                                <li>Redesigned both System and Brand icons</li>
-                                <li>Aligned designers and developers around usage rules</li>
-                                <li>Ensured cross-platform consistency</li>
-                            </ul>
+                        <p>When I joined, itslearning used more than ten different icon sets — vector, raster, color, monochrome, pulled from multiple libraries over the years. For many actions, like “edit,” there were ten different pencils across the product.</p>
+
+                        <p>To bring clarity, I split the entire iconography into two categories: System and Brand.</p>
+
+                        <p><strong>System icons</strong> represent the core UI metaphors (edit, add, delete). I aligned the team on one rule: one library, one style. We moved to a single version of Font Awesome, defined strict usage rules, and replaced the legacy icons step by step. I created the templates myself and updated a significant portion of the icons during the transition.</p>
+
+                        <figure class="illustration-with-caption">
+                            <img src="assets/projects/lms/lms-systemicons-edit.jpg" alt="9 old edit icons and 1 new that replaces them in LMS" class="illustration">
+                            <figcaption>Replacing multiple variants of an edit icon with a single one</figcaption>
+                        </figure>
+
+                        <p><strong>Brand icons</strong> illustrate concepts unique to the LMS (course, assignment, quiz). They were inconsistent, mostly raster, and unmaintainable. Raster icons had no source files left, so fixing or updating them was impossible.</p>
                         
                         <figure class="illustration-with-caption">
                             <img src="assets/projects/lms/lms-brand-icons-old.jpg" alt="Old LMS icons, icons have different style and fidelity level" class="illustration">
                             <figcaption>Old brand icons</figcaption>
                         </figure>
 
+                        <p>I introduced clear creation principles and a shared template so any designer could produce a new brand icon. Many were redrawn from scratch, with Font Awesome used as a base where possible.</p>
+
                         <figure class="illustration-with-caption">
                             <img src="assets/projects/lms/lms-brand-icons-new.jpg" alt="Old LMS icons, icons have different style and fidelity level" class="illustration">
                             <figcaption>New brand icons with guidelines for UX designers</figcaption>
                         </figure>
 
-                        <p>This significantly reduced visual noise and improved usability across the LMS.</p>
+                        <p>Today, both icon sets are used consistently across web and mobile.</p>
+
+                        <p>It was a massive effort across the whole UX team, but the system we built is now easy to scale, easy to maintain, and finally predictable.</p>
 
                     <h3>Grew Accessibility Maturity</h3>
                         <p>When I joined, designers and developers were in a state of constant disagreement. I took multiple steps to change attitude in the UX team and improve communication with the accessibility front-end team:</p>
@@ -269,22 +289,23 @@
                             </div>
 
                     <h3>Team Growth & Leadership</h3>
-                        <p>Throughout the transformation, I focused heavily on the team:</p>
-                        <ul>
-                            <li>Hired 4 UX designers</li>
-                            <li>Led the recruitment of an Accessibility Expert</li>
-                            <li>Built the onboarding path for UX designers</li>
-                            <li>Ran weekly design critiques, workshops and retrospectives</li>
-                            <li>Enabled designers to make better decisions independently</li>
-                            <li>Ensured that every designer contributed to Prometheus</li>
-                            <li>Created a culture of consistency, clarity, and shared ownership</li>
-                            <li>Moved the team from Sketch to Figma by mid-2023</li>
-                        </ul>
-
+                        <p>Back then, the UX team consisted of two designers and a UX writer. Over the next three years, I grew it to <strong>5 designers, a UX writer, and an Accessibility Expert</strong>.</p>
+                        
+                        <p>I built a <strong>collaborative design culture</strong> from scratch, shifting the team from isolated contributors to a unified group building a system together.</p>
+                        
                         <figure class="illustration-with-caption">
                             <img src="assets/projects/lms/lms-team-rituals.jpg" alt="Weekly team rituals in the Teams calendar. Monday: Kanban board reaview and What are you working on. Tuesday and Thursday: design feedback session. Friday: design coffee." class="illustration">
                             <figcaption>Weekly team rituals</figcaption>
                         </figure>
+
+                        <p>Some other team-related achievements:</p>
+                        <ul>
+                            <li>Ensured that every designer contributed to the Prometheus design system</li>
+                            <li>Moved the team from Sketch to Figma by mid-2023</li>
+                            <li>Encoraged designers to collaborate on projects and practive mentorship in the team</li>
+                            <li>Hired and onboarded 4 UX designers</li>
+                            <li>Led the recruitment of an Accessibility Expert</li>
+                        </ul>
 
                         <blockquote>You are one of the best design leaders I ever worked with. And some of them had two or three times more years of experience than you have now. You are so talented, both in design and in leadership<span class="quote-source">— Matylda Rohleder, UX designer</span></blockquote>
 
@@ -313,16 +334,6 @@
                                 </ul>
                         </div>
                         
-                        <div class="impact-card">
-                            <span class="impact-icon">♟️</span>
-                            <h3>Culture</h3>
-                                <ul>
-                                    <li>Shift from conflict to alignment</li>
-                                    <li>Shared vocabulary and principles</li>
-                                    <li>Transparent processes</li>
-                                    <li>Cross-team trust</li>
-                                </ul>
-                        </div>
                     </div>
 
                     <blockquote>Aleksandra combines a rare level of professionalism with a deep commitment to accessibility and product quality. Aleksandra always ensures her team is moving in a clear, unified direction, and her approach to organizing work is truly impressive. <span class="quote-source">— Marcin Klimaszewski, Head of UX at Sanoma Learning</span></blockquote>
