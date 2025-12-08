@@ -183,6 +183,11 @@ main a:is(:not(.link-block)) {
     text-decoration-thickness: 0.125em;
     text-decoration-skip-ink: none;
     text-underline-offset: 0.125em;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: light-dark(var(--primary-600), var(--primary-200));
+    }
 
     /* &[target="_blank"]::after {
         content: "↗";
