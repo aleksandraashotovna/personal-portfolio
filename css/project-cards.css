@@ -23,7 +23,7 @@
     }
 
     h3 {
-        margin: 0;
+        margin-block: 0.25rem 0.5em;
     }
 
     p {
@@ -33,6 +33,12 @@
     > * {
         align-self: start;
     }
+}
+
+.product-name {
+    font-size: 0.875em;
+    color: var(--text-color-secondary);
+    /* margin-block-end: 0.75em; */
 }
 
 
