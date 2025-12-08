@@ -35,6 +35,8 @@
     line-height: 1.5;
     word-wrap: break-word;
 
+    --icon-size: 2em;
+
     --focus-outline: light-dark(var(--primary-100), var(--text-color)) 3px solid;
     --focus-outline-offset: 4px;
 }
@@ -344,8 +346,32 @@ header {
 
 /* Links */
 
+a.primary-link {
+    --icon-size: 1.25em;
+
+    display: flex;
+    gap: 1em;
+    justify-self: start;
+    padding: 0.75em 2em;
+    align-items: center;
+
+    border-radius: 20rem;
+    background-color: var(--text-color);
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+
+    span {
+        color: var(--text-color-inverted);
+    }
+
+    &:hover {
+        background-color: light-dark(var(--primary-500), var(--primary-100));
+    }
+
+}
+
 .link-block {
-    --icon-size: 2em;
 
     background-color: var(--bg-secondary);
     color: var(--text-color);
@@ -359,26 +385,6 @@ header {
     align-items:center;
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    
-    .icon-wrapper {
-        height: calc(var(--icon-size) * 2);
-        width: calc(var(--icon-size) * 2);
-        padding: calc(var(--icon-size) / 2);
-        background-color: var(--bg-main);
-        border-radius: 4rem;
-        outline: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), var(--gray-600));
-
-        box-shadow: var(--shadow);
-        transition: box-shadow 0.3s ease;
-    }
-
-    .icon {
-        fill: light-dark(var(--gray-600), var(--gray-400));
-        display: block;
-        width: var(--icon-size);
-        height: var(--icon-size);
-        transition: all 0.3s ease;
-    }
 
     .original-icon {
         position: relative;
@@ -427,6 +433,26 @@ header {
             top: 0;
             opacity: 1;
         }
+    }
+}
+
+.icon-wrapper {
+    height: calc(var(--icon-size) * 2);
+    width: calc(var(--icon-size) * 2);
+    padding: calc(var(--icon-size) / 2);
+    background-color: var(--bg-main);
+    border-radius: 4rem;
+    outline: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), var(--gray-600));
+
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.3s ease;
+
+    .icon {
+        fill: light-dark(var(--gray-600), var(--gray-400));
+        display: block;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        transition: all 0.3s ease;
     }
 }
 
