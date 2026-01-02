@@ -178,33 +178,6 @@ main ol {
 }
 
 
-main a:is(:not(.link-block)) {
-    color: light-dark(var(--primary-500), var(--primary-100));
-    text-decoration-thickness: 0.125em;
-    text-decoration-skip-ink: none;
-    text-underline-offset: 0.125em;
-    transition: all 0.3s ease;
-
-    &:hover {
-        color: light-dark(var(--primary-600), var(--primary-200));
-    }
-
-    /* &[target="_blank"]::after {
-        content: "↗";
-        display: inline-block;
-        margin-inline: 0.125em;
-        position: relative;
-        top: 0.15em;
-        transition: transform 0.3s ease;
-    }
-
-    &[target="_blank"]:hover::after {
-        transform: rotate(45deg);
-    } */
-}
-
-
-
 /* Main nav */
 
 nav {
@@ -351,7 +324,32 @@ header {
 
 /* Links */
 
-a.primary-link {
+.link {
+    color: light-dark(var(--primary-500), var(--primary-100));
+    text-decoration-thickness: 0.125em;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 0.125em;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: light-dark(var(--primary-600), var(--primary-200));
+    }
+
+    /* &[target="_blank"]::after {
+        content: "↗";
+        display: inline-block;
+        margin-inline: 0.125em;
+        position: relative;
+        top: 0.15em;
+        transition: transform 0.3s ease;
+    }
+
+    &[target="_blank"]:hover::after {
+        transform: rotate(45deg);
+    } */
+}
+
+.primary-link {
     --icon-size: 1.25em;
 
     display: flex;
@@ -376,7 +374,7 @@ a.primary-link {
     }
 }
 
-p + a.primary-link {
+p + .primary-link {
     margin-top: 0.75em;
 }
 
