@@ -1,0 +1,9 @@
+.main-header {
+    min-height: 100dvh;
+    justify-content: center;
+    padding-block: 1em;
+
+    p {
+        max-width: 35ch;
+    }
+}

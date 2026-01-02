@@ -361,6 +361,7 @@ a.primary-link {
     align-items: center;
 
     border-radius: 20rem;
+    color: var(--text-color-inverted);
     background-color: var(--text-color);
     text-decoration: none;
 
@@ -373,7 +374,10 @@ a.primary-link {
     &:hover {
         background-color: light-dark(var(--primary-500), var(--primary-100));
     }
+}
 
+p + a.primary-link {
+    margin-top: 0.75em;
 }
 
 .link-block {
