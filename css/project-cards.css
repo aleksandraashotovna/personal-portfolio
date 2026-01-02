@@ -11,6 +11,11 @@
     border: 1px solid light-dark(var(--gray-200), var(--gray-600));
     border-radius: 0.5em;
     background-color: var(--bg-main);
+
+    @supports (corner-shape: squircle) {
+        border-radius: 1em;
+        corner-shape: squircle;
+    }
 }
 
 .project {

@@ -194,6 +194,11 @@ p + .data-row {
     border: 1px solid light-dark(var(--gray-200), var(--gray-600));
     padding: 1em 2em 1.5em;
 
+    @supports (corner-shape: squircle) {
+        border-radius: 2em;
+        corner-shape: squircle;
+    }
+
     .impact-icon {
         font-size: 2.5em;
     }
