@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sections = Array.from(document.querySelectorAll("main > section[id]"));
-  const navLinks = Array.from(document.querySelectorAll('nav ul a[href^="#"]'));
+  const navLinks = Array.from(document.querySelectorAll('.floating-nav ul a[href^="#"]'));
 
   function clearCurrent() {
     navLinks.forEach(link => {

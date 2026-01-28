@@ -76,7 +76,7 @@ h2 + h3 {
         font-size: 0.875em;
         /* color: var(--text-color-secondary); */
         margin-block-end: 0.25rem;
-        font-weight: bold;
+        font-weight: var(--bold);
     }
 
     .label + ul {

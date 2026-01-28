@@ -1,6 +1,10 @@
 .main-header {
-    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70dvh;
     justify-content: center;
+    text-align: center;
     padding-block: 1em;
 
     p {
