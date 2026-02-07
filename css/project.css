@@ -191,7 +191,7 @@ p + .data-row {
 
 .impact-card {
     border-radius: 1em;
-    border: 1px solid light-dark(var(--gray-200), var(--gray-600));
+    border: 1px solid var(--gray-200);
     padding: 1em 2em 1.5em;
 
     @supports (corner-shape: squircle) {

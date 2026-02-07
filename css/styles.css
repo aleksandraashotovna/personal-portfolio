@@ -16,8 +16,6 @@
 }
 
 :root {
-    color-scheme: light dark;
-
     --bold: 700;
 
     --bg-main: var(--gray-0);
@@ -39,19 +37,8 @@
 
     --icon-size: 2em;
 
-    --focus-outline: light-dark(var(--primary-500), var(--text-color)) 3px solid;
+    --focus-outline: var(--primary-500) 3px solid;
     --focus-outline-offset: 4px;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-main: var(--gray-800);
-        --bg-secondary: var(--gray-750);
-        --text-color: var(--gray-0);
-        --text-color-secondary: var(--gray-300);
-        --text-color-inverted: var(--gray-800);
-    }
-
 }
 
 html {
@@ -195,7 +182,7 @@ main ol {
     padding: 0.25em;
     background-color: var(--bg-main);
     border-radius: 0.75em;
-    outline: 1px solid light-dark(var(--gray-200), var(--gray-600));
+    outline: 1px solid var(--gray-200);
     box-shadow: var(--shadow);
     position: fixed;
     top: -10em;
@@ -380,14 +367,14 @@ header {
 /* Links */
 
 .link {
-    color: light-dark(var(--primary-500), var(--primary-100));
+    color: var(--primary-500);
     text-decoration-thickness: 0.125em;
     text-decoration-skip-ink: none;
     text-underline-offset: 0.125em;
     transition: all 0.3s ease;
 
     &:hover {
-        color: light-dark(var(--primary-600), var(--primary-200));
+        color: var(--primary-600);
     }
 
     /* &[target="_blank"]::after {
@@ -425,7 +412,7 @@ header {
     }
 
     &:hover {
-        background-color: light-dark(var(--primary-500), var(--primary-100));
+        background-color: var(--primary-500);
     }
 }
 
@@ -441,7 +428,7 @@ p + .primary-link {
     flex-direction: row;
     gap: 1.25em;
     border-radius: 1em;
-    border: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), hsl(from var(--gray-600) h s l / 0.5));
+    border: 1px solid hsl(from var(--gray-200) h s l / 0.5);
     padding: 1.5em 2em;
     text-decoration: none;
     align-items:center;
@@ -489,7 +476,7 @@ p + .primary-link {
     &:hover {
         cursor: pointer;
         text-decoration: none;
-        background-color: light-dark(var(--gray-150), var(--gray-700));
+        background-color: var(--gray-150);
 
         .original-icon {
             top: -0.5em;
@@ -509,13 +496,13 @@ p + .primary-link {
     padding: calc(var(--icon-size) / 2);
     background-color: var(--bg-main);
     border-radius: 4rem;
-    outline: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), var(--gray-600));
+    outline: 1px solid hsl(from var(--gray-200) h s l / 0.5);
 
     box-shadow: var(--shadow);
     transition: box-shadow 0.3s ease;
 
     .icon {
-        fill: light-dark(var(--gray-600), var(--gray-400));
+        fill: var(--gray-600);
         display: block;
         width: var(--icon-size);
         height: var(--icon-size);
@@ -630,14 +617,14 @@ p + .link-block {
         border-color: var(--outline-color);
         
         .icon {
-            fill: light-dark(var(--core-color), var(--gray-0));
+            fill: var(--core-color);
         }
     }
 
     .icon {
         width: 3em;
         height: 3em;
-        fill: light-dark(var(--gray-500), var(--gray-300));
+        fill: var(--gray-500);
     }
 }
 

@@ -59,15 +59,9 @@
 .csr,
 .ehr,
 .lms {
-  --bg-color: light-dark(
-    hsl(from var(--core-color) h s 97%), 
-    hsl(from var(--core-color) h s 10%)
-  );
+  --bg-color: hsl(from var(--core-color) h s 97%);
 
-  --outline-color: light-dark(
-    hsl(from var(--core-color) h s 85%), 
-    hsl(from var(--core-color) h calc(s * 0.8) 20%)
-  );
+  --outline-color: hsl(from var(--core-color) h s 85%);
 
   --shadow-color:
     0 8px 20px hsl(from var(--core-color) h s l / 0.15),
