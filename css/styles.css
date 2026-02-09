@@ -330,23 +330,6 @@ header {
 
 /* About */
 
-.videos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
-    gap: 1em;
-    margin-block: 1.5em 0;
-
-    iframe {
-        border-radius: clamp(0.5em, 2vw, 1em);
-        width: 100%;
-        aspect-ratio: 16 / 9;
-    }
-
-    @media (max-width: 640px) {
-        grid-template-columns: 1fr;
-    }
-}
-
 .about-columns {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -549,7 +532,7 @@ p + .link-block {
         grid-row: span 2;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
         > * {
             grid-column: span 2;
         }
