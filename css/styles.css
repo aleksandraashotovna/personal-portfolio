@@ -556,6 +556,90 @@ p + .link-block {
     }
 }
 
+/* Dribbble shots */
+
+.dribbble-shots {
+    h3 {
+        margin-block-start: 0;
+    }
+
+    .link-block.dribbble {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-block: 3em;
+
+    transition: all 0.3s ease;
+}
+
+}
+
+.dribbble-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+
+  margin-block-start: 1.5em;
+
+  @media screen and (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dribbble-grid a:not(.link-block.dribbble) {
+    display: block;
+    position: relative;
+    border-radius: 1em;
+    overflow: hidden;
+    border: 1px solid hsl(from var(--gray-200) h s l / 0.5);
+    transition: all 0.3s ease;
+
+    @supports (corner-shape: squircle) {
+        border-radius: 2em;
+        corner-shape: squircle;
+    }
+
+    .icon-wrapper {
+        position: absolute;
+        top: 0.5em;
+        right: 0.25em;
+        margin-inline: auto;
+
+        opacity: 0;
+        transform: scale(0.6);
+        transition: all 0.5s ease;
+    }
+}
+
+.dribbble-grid a:not(.link-block.dribbble):hover {
+    border: 1px solid hsl(from var(--gray-200) h s l / 0.75);
+
+    .icon-wrapper {
+        opacity: 1;
+        top: 0.25em;
+    }
+}
+
+.dribbble-grid img {
+  width: 100%;
+  display: block;
+}
+
+.dribbble-grid-error {
+  text-align: center;
+  padding: 40px 0;
+  font-family: sans-serif;
+  background-color: var(--gray-100);
+  border-radius: 1em;
+
+    @supports (corner-shape: squircle) {
+        border-radius: 2em;
+        corner-shape: squircle;
+    }
+}
+
+
 /* Contacts */
 
 .contacts-grid {
@@ -579,19 +663,6 @@ p + .link-block {
         grid-column: span 3;
     }
 }
-
-.link-block.dribbble {
-    grid-column: span 2;
-}
-
-/* @media screen and (width > 800px) {
-    .link-block.dribbble {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
-} */
 
 @media screen and (max-width: 480px) {
     .contacts-grid {

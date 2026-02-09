@@ -22,6 +22,8 @@
         </script>
         <noscript><div><img src="https://mc.yandex.ru/watch/106605320" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
+        
+        <script src="js/dribbble-gallery.js"></script>
     </head>
 
     <body>
@@ -103,19 +105,13 @@
                                 </div>
                             </a>
 
-                            <a class="link-block color-coded dribbble" href="https://dribbble.com/ashkurat" target="_blank" rel="noopener noreferrer">
-                                <div class="icon-wrapper">
-                                    <svg aria-hidden="true" class="icon jumping-icon">
-                                        <use href="assets/icons.svg#dribbble"></use>
-                                    </svg>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="link-title">Want to see more UI examples?</p>
-                                    <p>Check out my Dribbble</p>
-                                </div>
-                            </a>
                         </div>
-                </section>
+                    </section>
+                    
+                    <section id="dribbble-shots" class="dribbble-shots breakout">
+                        <h3>Experiments</h3>
+                        <div id="gallery" class="dribbble-grid"></div>
+                    </section>
 
                 <section id="about" class="breakout">
                     <h2>About</h2>
@@ -139,12 +135,8 @@
                                 </div>
                             </a>
 
-                            <p>Currently, I'm leading a cross-functional team of 5 UX designers, a UX writer and an Accessibility expert at <a class="link" href="https://www.sanomalearning.com/" target="_blank" rel="noopener noreferrer">Sanoma Learning</a>, a leading K12 European learning company. My main focus is <a class="link" href="https://itslearning.com/" target="_blank" rel="noopener noreferrer">itslearning</a>, a digital Learning Management System.</p>
+                            <p>Currently, I'm leading a cross-functional team of 5 UX designers, a UX writer and an Accessibility expert at <a class="link" href="https://www.sanomalearning.com/" target="_blank" rel="noopener noreferrer" aria-describedby="opens-new-tab">Sanoma Learning</a>, a leading K12 European learning company. My main focus is <a class="link" href="https://itslearning.com/" target="_blank" rel="noopener noreferrer" aria-describedby="opens-new-tab">itslearning</a>, a digital Learning Management System.</p>
 
-                            <!-- <div class="videos">
-                                <iframe src="https://www.youtube.com/embed/BpNkRRCp5po?si=rK-EP520wl6qsLid" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                <iframe src="https://www.youtube.com/embed/-aQoCh86ceI?si=DHZUnVmbdqybJniv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div> -->
                         </div>
                         <img src="/assets/photos/waysconf_badge.jpg" alt="Aleksandra's speaker badge from the WaysConf in 2023" class="about-photo illustration">
                     </div>
@@ -168,21 +160,21 @@
                                     </div>
                                 </a>
                             </li>
-                            <li><a href="https://www.linkedin.com/in/aleksandrashkurat/" class="link-block social linkedin" target="_blank" rel="noopener noreferrer" title="Will open in a new tab">
+                            <li><a href="https://www.linkedin.com/in/aleksandrashkurat/" class="link-block social linkedin" target="_blank" rel="noopener noreferrer" aria-describedby="opens-new-tab">
                                     <svg aria-hidden="true" class="icon">
                                         <use xlink:href="assets/icons.svg#linkedin"></use>
                                     </svg>
                                     <span class="visually-hidden">LinkedIn</span>
                                 </a>
                             </li>
-                            <li><a href="https://dribbble.com/ashkurat" class="link-block social dribbble" target="_blank" rel="noopener noreferrer" title="Will open in a new tab">
+                            <li><a href="https://dribbble.com/ashkurat" class="link-block social dribbble" target="_blank" rel="noopener noreferrer" aria-describedby="opens-new-tab">
                                     <svg aria-hidden="true" class="icon">
                                         <use xlink:href="assets/icons.svg#dribbble"></use>
                                     </svg>
                                     <span class="visually-hidden">Dribbble</span>
                                 </a>
                             </li>
-                            <li><a href="https://www.figma.com/@aleksandra10" class="link-block social figma" target="_blank" rel="noopener noreferrer" title="Will open in a new tab">
+                            <li><a href="https://www.figma.com/@aleksandra10" class="link-block social figma" target="_blank" rel="noopener noreferrer" aria-describedby="opens-new-tab">
                                     <svg aria-hidden="true" class="icon">
                                         <use xlink:href="assets/icons.svg#figma"></use>
                                     </svg>
@@ -198,6 +190,10 @@
             </main>
             
         </div>
+
+        <span id="opens-new-tab" hidden>
+            Opens in a new tab
+        </span>
         
         <script src="js/active-section.js"></script>
     </body>
