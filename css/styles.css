@@ -35,6 +35,8 @@
     line-height: 1.5;
     word-wrap: break-word;
 
+    --card-ease: cubic-bezier(0.165, 0.84, 0.44, 1);
+
     --icon-size: 2em;
 
     --focus-outline: var(--primary-500) 3px solid;
@@ -415,7 +417,7 @@ p + .primary-link {
     padding: 1.5em 2em;
     text-decoration: none;
     align-items:center;
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 1s var(--card-ease), border-color 1s var(--card-ease), box-shadow 1s var(--card-ease);
     overflow: hidden;
 
     @supports (corner-shape: squircle) {
@@ -570,6 +572,10 @@ p + .link-block {
     }
 }
 
+.dribbble-grid img {
+  transition: transform 1s var(--card-ease);
+}
+
 .dribbble-grid a:not(.link-block.dribbble) {
     display: block;
     position: relative;
@@ -596,7 +602,9 @@ p + .link-block {
 }
 
 .dribbble-grid a:not(.link-block.dribbble):hover {
-    border: 1px solid hsl(from var(--gray-200) h s l / 0.75);
+    img {
+        transform: scale(1.03);
+    }
 
     .icon-wrapper {
         opacity: 1;
