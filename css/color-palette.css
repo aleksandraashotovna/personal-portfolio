@@ -50,7 +50,8 @@
 }
 
 .lms {
-  --core-color: hsl(26 95% 46%);
+  /* --core-color: hsl(26 95% 46%); */
+  --core-color: hsl(264, 48%, 42%);
 }
 
 .linkedin,
