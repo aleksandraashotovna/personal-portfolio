@@ -78,7 +78,7 @@ body {
 
 .breakout {
     grid-column: breakout-start / breakout-end;
-    max-width: 120ch;
+    /* max-width: 120ch; */
 }
 
 

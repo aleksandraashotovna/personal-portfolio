@@ -158,26 +158,6 @@ p + .data-row {
     margin-block-start: 1.5em;
 }
 
-.project-header {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 2.5em 4em;
-
-    align-items: center;
-    justify-self: center;
-    grid-column: breakout-start / breakout-end;
-    max-width: 120ch;
-
-    @media screen and (min-width: 1001px) and (max-width: 1400px) {
-        margin-right: -20rem;
-    }
-
-    @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr;
-        grid-column: content-start / content-end;
-    }
-}
-
 .impact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -236,3 +216,38 @@ p + .data-row {
     }
 }
 
+/* Hero image */
+
+.hero-image {
+    padding: clamp(1.5em, 6vw, 4em) max(1.5em, 6vw) 0;
+    margin-block: 3em;
+    background-color: var(--bg-color);
+    border: 1px solid var(--outline-color);
+    border-radius: 1em;
+    overflow: hidden;
+    view-timeline-name: --hero-scroll;
+    
+    @supports (corner-shape: squircle) {
+        border-radius: 2em;
+        corner-shape: squircle;
+    }
+    
+    img {
+        margin-block-end: -6em;
+        box-shadow: var(--shadow-color);
+        animation-name: hero-image-dissolve;
+        animation-timeline: --hero-scroll;
+        animation-range: exit 50% exit 100%;
+    }
+
+}
+
+@keyframes hero-image-dissolve {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
