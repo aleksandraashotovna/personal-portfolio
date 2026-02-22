@@ -196,26 +196,6 @@ p + .data-row {
     }
 }
 
-.read-next-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1em;
-    margin-block-start: 5em;
-
-    @media screen and (max-width: 600px) {
-        grid-template-columns: 1fr;
-    }
-
-    h2 {
-        margin: 0;
-        align-self: start;
-    }
-
-    .project {
-        grid-template-rows: auto;
-    }
-}
-
 /* Hero image */
 
 .hero-image {
