@@ -16,7 +16,7 @@
 }
 
 :root {
-    --bold: 700;
+    --bold: 600;
 
     --bg-main: var(--gray-0);
     --bg-secondary: var(--gray-100);
@@ -60,7 +60,7 @@ body {
     --padding-inline: max(2em, 5vw);
 
     display: grid;
-    grid-template-columns: minmax(var(--padding-inline), 1fr) [breakout-start] 2fr [content-start] min(var(--content-max-width), 100% - var(--padding-inline)*2) [content-end] 2fr [breakout-end] minmax(var(--padding-inline), 1fr);
+    grid-template-columns: [page-start] minmax(var(--padding-inline), 1fr) [breakout-start] 2fr [content-start] min(var(--content-max-width), 100% - var(--padding-inline)*2) [content-end] 2fr [breakout-end] minmax(var(--padding-inline), 1fr) [page-end];
     justify-self: center;
     width: 100%;
 }
@@ -79,6 +79,10 @@ body {
 .breakout {
     grid-column: breakout-start / breakout-end;
     /* max-width: 120ch; */
+}
+
+.full-width {
+    grid-column: page-start / page-end;
 }
 
 
@@ -105,7 +109,7 @@ h3 {
 }
 
 p {
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 
 h1 + p {
