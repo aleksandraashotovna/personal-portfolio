@@ -410,31 +410,29 @@ main ol {
     text-transform: uppercase;
     font-weight: var(--bold);
     letter-spacing: 7%;
+}
 
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
 
+.mobile-menu li {
+    margin: 2em 0;
+}
 
-    ul {
-        list-style: none;
-        padding: 0;
-        text-align: center;
-        font-size: 1.5em;
-    }
-    
-    li {
-        margin: 2em 0;
-    }
-    
-    a {
-        color: var(--gray-0);
-        text-decoration: none;
-    }
+.mobile-menu a {
+    color: var(--gray-0);
+    text-decoration: none;
+}
 
-    &.open {
-        visibility: visible;
-        transition: visibility .6s step-start;
-        animation: .6s cubic-bezier(.165,.84,.44,1) forwards swipeIn;
-        display: flex;
-    }
+.mobile-menu.open {
+    visibility: visible;
+    transition: visibility .6s step-start;
+    animation: .6s cubic-bezier(.165,.84,.44,1) forwards swipeIn;
+    display: flex;
 }
 
 @keyframes swipeIn {
