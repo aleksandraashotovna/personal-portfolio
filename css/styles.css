@@ -100,7 +100,7 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    margin-block-start: 2em;
+    margin-block-start: 3em;
 }
 
 h3 {
@@ -674,6 +674,30 @@ p + .link-block {
 
 
 /* Portfolio */
+
+.project-tags {
+    margin-block: 0.75em 1em;
+    display: flex;
+    gap: 0.5em;
+    font-size: 0.875em;
+    flex-wrap: wrap;
+}
+
+p + .project-tags {
+    margin-top: 1.5em;
+}
+
+.project-tag {
+    padding: 0.25em 0.75em;
+    border: 1px solid var(--gray-200);
+    border-radius: 0.5em;
+    background-color: var(--bg-main);
+
+    @supports (corner-shape: squircle) {
+        border-radius: 1em;
+        corner-shape: squircle;
+    }
+}
 
 .projects {
     display: grid;

@@ -51,22 +51,26 @@
     flex-direction: column;
     border-radius: 1em;
     padding: 2em 2.5em;
-    margin-block: 3em;
 
+    
     @supports (corner-shape: squircle) {
         border-radius: 2em;
         corner-shape: squircle;
     }
-
+    
     .author,
     .role {
         font-size: 0.75em;
     }
-
+    
     .author {
         margin-block-start: 2em;
         font-weight: var(--bold);
     }
+}
+
+p + .blockquote-box {
+    margin-block: 2em;
 }
 
 .illustration-with-caption {
@@ -188,6 +192,8 @@ p + .data-row {
 .content-grid + .img-grid,
 p + img,
 p + .img-grid,
+h2 + img,
+h2 + .img-grid,
 img + p {
     margin-block-start: 3em;
 }
@@ -203,10 +209,11 @@ img + p {
     gap: 1em;
     /* justify-self: center; */
     /* margin-block: 2em; */
+
     
-    /* img {
-        margin: 0;
-    } */
+    .wide {
+        grid-column: span 2;
+    }
 
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;
@@ -214,10 +221,6 @@ img + p {
         .wide {
             grid-column: span 1;
         }
-    }
-
-    .wide {
-        grid-column: span 2;
     }
 }
 
@@ -241,7 +244,7 @@ img + p {
     }
 }
 
-.subtitle {
+h1 + .subtitle {
     margin-block-start: 1.5em;
 }
 
