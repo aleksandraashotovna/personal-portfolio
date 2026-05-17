@@ -69,8 +69,13 @@
     }
 }
 
-p + .blockquote-box {
+p + .blockquote-box,
+.img-grid + .blockquote-box {
     margin-block: 2em;
+}
+
+header + .img-grid {
+    margin-block-start: 3em;
 }
 
 .illustration-with-caption {
@@ -195,7 +200,8 @@ p + .img-grid,
 h2 + img,
 h2 + .img-grid,
 img + p,
-header + .img-grid {
+header + .img-grid,
+.img-grid + p {
     margin-block-start: 3em;
 }
 
@@ -246,7 +252,7 @@ header + .img-grid {
 }
 
 h1 + .subtitle {
-    margin-block-start: 1.5em;
+    margin-block-start: 1.25em;
 }
 
 .impact-grid {
