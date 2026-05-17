@@ -183,7 +183,7 @@ main ol {
 
 /* Main nav */
 
-.floating-nav {
+/* .floating-nav {
     z-index: 1000;
     font-size: 0.875em;
     padding: 0.25em;
@@ -201,6 +201,43 @@ main ol {
         border-radius: 4em;
         corner-shape: squircle;
     }
+
+} */
+
+.case-nav {
+    z-index: 1000;
+    font-size: 0.875em;
+    padding: 0.25em;
+    background-color: var(--text-color);
+    color: var(--text-color-inverted);
+    /* background-color: var(--bg-main); */
+    border-radius: 0.75em;
+    outline: 1px solid var(--gray-700);
+    box-shadow: var(--shadow);
+    position: fixed;
+    bottom: -10em;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: case-nav-slide-in 1s cubic-bezier(.4,0,.2,1) 0.5s forwards;
+
+    @supports (corner-shape: squircle) {
+        border-radius: 4em;
+        corner-shape: squircle;
+    }
+
+    .icon-only {
+        padding: 0.5em 0.75em;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        .icon {
+            height: 1.5rem;
+            width: 1.5rem;
+            fill: var(--text-color-inverted);
+        }
+    }
+
 
 }
 
@@ -256,6 +293,37 @@ main ol {
     }
 }
 
+.case-nav {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: inline-flex;
+        gap: 0.25em;
+    }
+
+    li a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        padding: 0.5em 1.25em;
+        height: 100%;
+        border-radius: 0.5em;
+        align-content: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        @supports (corner-shape: squircle) {
+            border-radius: 3.75em;
+            corner-shape: squircle;
+        }
+
+        &:hover {
+            background-color: var(--gray-700);
+            cursor: pointer;
+            text-decoration: none;      
+        }
+    }
+}
+
 @keyframes nav-slide-in {
     from {
         top: -10em;
@@ -267,6 +335,18 @@ main ol {
     }
 }
 
+@keyframes case-nav-slide-in {
+    from {
+        bottom: -10em;
+        opacity: 0;
+    }
+    to {
+        bottom: 1em;
+        opacity: 1;
+    }
+}
+
+.case-nav .current-menu-item,
 .floating-nav .current-menu-item {
     background-color: var(--text-color);
     color: var(--text-color-inverted);
