@@ -144,14 +144,14 @@ img {
     display: block;
 
     &.illustration {
-        border-radius: 0.5em;
+        border-radius: 1em;
         max-width: 100%;
         height: auto;
         object-fit: cover;
-        box-shadow: var(--shadow-images);
+        /* box-shadow: var(--shadow-images); */
 
         @supports (corner-shape: squircle) {
-            border-radius: 1em;
+            border-radius: 2em;
             corner-shape: squircle;
         }
     }

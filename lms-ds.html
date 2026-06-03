@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product & Design System Transformation - Aleksandra Shkurat | Product Design Lead</title>
+        <title>Design system for a legacy LMS - Aleksandra Shkurat | Product Design Lead</title>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/project.css">
         <link rel="stylesheet" href="css/project-cards.css">
@@ -68,9 +68,8 @@
 
             <main id="main" class="content-area lms">
                 <header>
-                        <h1>Scaling a legacy LMS</h1>
-                        <p class="subtitle">When I joined <a class="link" href="https://itslearning.com/" target="_blank" rel="noopener noreferrer">itslearning</a>, the product suffered from fragmented interfaces, inconsistent UX patterns, low accessibility maturity, and frequent conflicts between designers and developers.</p>
-                        <p class="subtitle">As a Lead Product Designer and Team Lead, I took ownership of transforming the entire UX function: unifying core UX patterns, scaling our design system, and re-establishing strong alignment with engineering.</p>
+                        <h1>Design system for a legacy LMS</h1>
+                        <p class="subtitle">I focused on turning fragmented UI decisions into a scalable design system used across development teams. I led the evolution of the system through simplification, standardization, and close collaboration with engineering, reducing inconsistency, improving adoption, and creating foundations that could scale with the product.</p>
 
                         <div class="project-tags">
                             <div class="project-tag">2022 — till now</div>
@@ -86,35 +85,24 @@
                 
                 <h2>Context</h2>
                 <p class="note">itslearning is a large European Learning Management System (LMS) with a 25 year long history that serves millions of teachers and students across K-12, higher and vocational education in 10+ markets.</p>
-                <p>When I joined, I approached the product with this vision: keep what works, evolve what’s valuable, and remove the legacy and silos slowing it down.</p>
-
-                <h2>Challenges</h2>
-                <p>After a quick but thorough assessment, I identified several foundational challenges:</p>
-                <ul>
-                    <li>A design system in place, but ignored by development teams</li>
-                    <li>No shared design vision across product, UX, and engineering</li>
-                    <li>UX and engineering were stuck in a long-running conflict around accessibility decisions</li>
-                    <li>No consistency in layouts, patterns, and UI decisions</li>
-                </ul>
-
-                <h2>Approach</h2>
-                <p>A redesign wasn’t realistic and not needed — priorities and resources didn’t allow it.</p>
-                <p>So I took an evolutionary approachinstead: analysing existing patterns, identifying structure, and building a unified system on top of the current product.</p>
-
+                <p>When I joined itslearning in late 2022, the design system already existed — but almost nobody used it. Only the team maintaining the system relied on its components, while other product teams continued building custom solutions for similar problems.</p>
+                <p>The UX team faced the same issue. The UI kit had grown without clear rules or ownership: duplicated components, overlapping styles, and inconsistent decisions across the product. Designers regularly introduced new patterns, and engineering teams implemented them as-is, which made the interface increasingly fragmented over time.</p>
 
                 <h2>Iconography</h2>
-                    <ul>
-                        <li>Replaced 10+ icon sets with a single system</li>
-                        <li>Icons are split into 2 categories: System and Brand</li>
-                        <li>Defined strict usage rules</li>
-                        <li>Introduced templates for designers</li>
-                    </ul>  
-                <img class="full-width brand-icons" src="assets/projects/lms-product/brand-icons.png" alt="Brand icons">
+                    <p>The icon system had evolved organically over many years, resulting in inconsistent styles, proportions, and alignment behavior across the product.</p>
+                    <p>We rebuilt the system around a unified structure using Font Awesome as a foundation. System icons were standardized for consistency and easier maintenance, while brand icons were redesigned into a single coherent style.</p>
+                    <img class="full-width brand-icons" src="assets/projects/lms-product/brand-icons.png" alt="Brand icons">
+                    <p>To make the system scalable, I also introduced reusable templates that allow any designer, regardless of illustration skills, to create new Brand icons consistent with the existing set:</p>
+                    <img class="illustration" src="assets/projects/lms-product//icon-templates.jpg" alt="Icon templates">
                     
                 <h2>Layout system</h2>
-                <p>TBA</p>
+                    <p>The product contained hundreds of pages built independently over more than 20 years. Despite their variety, most of them followed a small number of recurring patterns.</p>
+                    <p>I analysed the existing interface and introduced a unified page template system. It defines consistent navigation, content area, panels, spacing, and responsive behavior. Content layouts could adapt between narrow, wide, and full-width containers depending on the use case.</p>
+                    <p>These templates significantly improved consistency and helped teams build and redesign interfaces much faster.</p>
+                    <p><a href="https://sanomalearning.design/" target="_blank" rel="noopener noreferrer">Sanoma Learning Design System</a> reused our approach to layouts and made it available to all product teams across <a href="https://www.sanomalearning.com/" target="_blank" rel="noopener noreferrer">Sanoma Learning</a>.</p>
 
                 <h2>Colors</h2>
+                    <p>The color palette had grown over time without clear structure or rules. Similar colors were used inconsistently, and introducing branding changes was risky because accent and brand colors appeared almost everywhere in the interface.</p>
                     <ul>
                         <li>Reorganized the palette without changing the UI.</li>
                         <li>Reduced the number of tokens from 83 to 56.</li>
@@ -136,30 +124,32 @@
 
 
                 <h2>Typography</h2>
-                <ul>
-                    <li>Unified the typography system, deprecated ann the unnecessay and interchangeab;e options</li>
-                    <li>Introduced a font selection for personalization and accessibility</li>
-                    <li>Mapped dozens of custom styles and unified typography in the legacy part of the system</li>
-                </ul>
-
-                
+                    <p>I consolidated the system into a smaller, structured set of reusable text styles and mapped legacy styles to the updated typography scale. Over time, this significantly improved visual consistency across new features and redesigned areas of the product.</p>
+                    <p>Introduced a font selection for personalization and accessibility.</p>
                     <div class="img-grid breakout">
                         <img class="illustration" src="assets/projects/lms-product/typography.jpg" alt="Typography styles">
                         <img class="illustration" src="assets/projects/lms-product/font-selector.jpg" alt="Font selector">
                     </div>
+                
 
                 <h2>Attention to detail</h2>
-                <div class="img-grid breakout">
-                    <img class="illustration" src="assets/projects/lms-product/reports.jpg" alt="A list of some reports in a course">
-                    <img class="illustration" src="assets/projects/lms-product/reorder plans.jpg" alt="Plans reordering in progress">
-                    <img class="illustration" src="assets/projects/lms-product/reorder plans.jpg" alt="Plans reordering in progress">
-                    <img class="illustration" src="assets/projects/lms-product/global search.jpg" alt="Global search, the input field is selected and a list of suggestions is shown">
-                </div>
+                    <p>Beyond large system changes, I consistently focused on small interface improvements that made the product feel more polished, cohesive, and intentional. From interaction states to spacing, hierarchy, and visual consistency, these details helped strengthen the overall quality and perception of the system.</p>
+                    <div class="img-grid breakout">
+                        <img class="illustration" src="assets/projects/lms-product/reports.jpg" alt="A list of some reports in a course">
+                        <img class="illustration" src="assets/projects/lms-product/reorder plans.jpg" alt="Plans reordering in progress">
+                        <img class="illustration" src="assets/projects/lms-product/folder-icons.jpg" alt="Plans reordering in progress">
+                        <img class="illustration" src="assets/projects/lms-product/global search.jpg" alt="Global search, the input field is selected and a list of suggestions is shown">
+                    </div>
 
                 <blockquote class="blockquote-box">Aleksandra combines a rare level of professionalism with a deep commitment to accessibility and product quality. She always ensures her team is moving in a clear, unified direction, and her approach to organizing work is truly impressive. <span class="author">Marcin Klimaszewski</span> <span class="role">Head of UX at Sanoma Learning</span></blockquote>
 
                 <h2>Accessibility</h2>
                 <p>TBA</p>
+
+                <h2>Collaboration & Adoption</h2>
+                <p>A big part of my role is enabling collaboration between teams that previously worked in isolation.</p>
+                <p>I established weekly syncs with the Design System engineering team to review new components, edge cases, and implementation challenges early in the process. Together with the Product Owner, we also introduced regular pre-planning sessions to align upcoming work and coordinate requests from other product teams.</p>
+                <p>In practice, this meant building communication and shared ownership around the system — making sure design and engineering decisions were discussed collaboratively instead of being solved independently inside separate teams.</p>
 
                 <h2>Impact</h2>
                     <div class="impact-grid">
