@@ -194,7 +194,8 @@ p + img,
 p + .img-grid,
 h2 + img,
 h2 + .img-grid,
-img + p {
+img + p,
+header + .img-grid {
     margin-block-start: 3em;
 }
 
