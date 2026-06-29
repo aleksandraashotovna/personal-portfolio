@@ -621,7 +621,6 @@ p + .primary-link {
 }
 
 .link-block {
-
     background-color: var(--bg-secondary);
     color: var(--text-color);
     display: flex;
