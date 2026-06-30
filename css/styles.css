@@ -248,7 +248,7 @@ main ol {
         margin-inline: 2em;
         height: 0.25em;
         border-radius: 1em;
-        transition: transform 0.4s ease;
+        transition: transform 0.3s ease;
     }
 
     li:hover::after {
@@ -624,7 +624,7 @@ img.sticker {
     padding: 1.5em 2em;
     text-decoration: none;
     align-items:center;
-    transition: background-color 1s var(--card-ease), border-color 1s var(--card-ease), box-shadow 1s var(--card-ease);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 
     @supports (corner-shape: squircle) {
@@ -918,6 +918,8 @@ p + .project-tags {
         width: 3em;
         height: 3em;
         fill: var(--gray-500);
+        transition: fill 0.3s ease;
+
     }
 }
 
