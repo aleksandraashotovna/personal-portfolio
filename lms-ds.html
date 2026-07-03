@@ -98,21 +98,46 @@
                 <h2>Layout system</h2>
                     <p>The product contained hundreds of pages built independently over more than 20 years. Despite their variety, most of them followed a small number of recurring patterns.</p>
                     <p>I analysed the existing interface and introduced a unified page template system. It defines consistent navigation, content area, panels, spacing, and responsive behavior. Content layouts could adapt between narrow, wide, and full-width containers depending on the use case.</p>
+                    <div class="img-grid breakout">
+                        <figure class="illustration-with-caption wide">
+                            <video class="illustration"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                preload="metadata">
+                                <source src="assets/projects/lms-product/page template - content area.webm" type="video/webm">
+                            </video>
+                            <figcaption>Content area in the Page template</figcaption>
+                        </figure>
+                    </div>
+                    <div class="img-grid breakout">
+                        <figure class="illustration-with-caption wide">
+                            <video class="illustration"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                preload="metadata">
+                                <source src="assets/projects/lms-product/page template - panels.webm" type="video/webm">
+                            </video>
+                            <figcaption>Panels in the Page template</figcaption>
+                        </figure>
+                    </div>
                     <p>These templates significantly improved consistency and helped teams build and redesign interfaces much faster.</p>
-                    <p><a href="https://sanomalearning.design/" target="_blank" rel="noopener noreferrer">Sanoma Learning Design System</a> reused our approach to layouts and made it available to all product teams across <a href="https://www.sanomalearning.com/" target="_blank" rel="noopener noreferrer">Sanoma Learning</a>.</p>
+                    <p><a href="https://sanomalearning.design/" target="_blank" rel="noopener noreferrer">Sanoma Learning Design System</a> reused this approach to layouts and made it available to all product teams across <a href="https://www.sanomalearning.com/" target="_blank" rel="noopener noreferrer">Sanoma Learning</a>.</p>
 
                 <h2>Colors</h2>
                     <p>The color palette had grown over time without clear structure or rules. Similar colors were used inconsistently, and introducing branding changes was risky because accent and brand colors appeared almost everywhere in the interface.</p>
                     <ul>
                         <li>Reorganized the palette without changing the UI.</li>
-                        <li>Reduced the number of tokens from 83 to 56.</li>
+                        <li>Reduced the number of tokens in the main palette from 83 to 56.</li>
                         <li>Defined clear roles for each color.</li>
                         <li>Mapped 300+ custom colors and replaced them with tokens.</li>
                     </ul>
 
                     <div class="img-grid breakout">
-                        <img class="illustration" src="assets/projects/lms-product/color-palette.jpg" alt="Color palette">
-                        <img class="illustration" src="assets/projects/lms-product/abstract-colors.jpg" alt="">
+                        <img class="illustration wide" src="assets/projects/lms-product/color-palette.jpg" alt="Color palette">
                     </div>
                     
                     <p>As a result, no new colors have been introduced in the last 2 years. The usage rules are clear and strainghtforward, with hesitatnce between options being eliminated.</p>
@@ -124,12 +149,13 @@
 
 
                 <h2>Typography</h2>
-                    <p>I consolidated the system into a smaller, structured set of reusable text styles and mapped legacy styles to the updated typography scale. Over time, this significantly improved visual consistency across new features and redesigned areas of the product.</p>
-                    <p>Introduced a font selection for personalization and accessibility.</p>
+                    <p>Similarly to colors, I consolidated all typography into a smaller, structured set of reusable text styles and mapped legacy styles to it. Over time, this significantly improved visual consistency across new features and redesigned areas of the product.</p>
                     <div class="img-grid breakout">
                         <img class="illustration" src="assets/projects/lms-product/typography.jpg" alt="Typography styles">
                         <img class="illustration" src="assets/projects/lms-product/font-selector.jpg" alt="Font selector">
                     </div>
+                    <p>Once the typography system became predictable and consistent across itslearning, it made changing fonts individually per customer and user for personalization and accessibility possible. I analysed customer needs and internal requirement and prepared a limited font selection.</p>
+                    <p>So we first presented the concept at BETT 2026, where it was positively received, and are planning to release it for the 2026 school start.</p>
                 
 
                 <h2>Attention to detail</h2>
@@ -141,64 +167,77 @@
                         <img class="illustration" src="assets/projects/lms-product/global search.jpg" alt="Global search, the input field is selected and a list of suggestions is shown">
                     </div>
 
-                <blockquote class="blockquote-box">Aleksandra combines a rare level of professionalism with a deep commitment to accessibility and product quality. She always ensures her team is moving in a clear, unified direction, and her approach to organizing work is truly impressive. <span class="author">Marcin Klimaszewski</span> <span class="role">Head of UX at Sanoma Learning</span></blockquote>
+                    
+                    <h2>Accessibility</h2>
+                    <p>When I joined, designers and developers were in a state of constant disagreement. I took multiple steps to change attitude in the UX team and improve communication with the accessibility front-end team:</p>
+                    <ul>
+                        <li>Taught designers to read and interpret <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> and Understanding documents</li>
+                        <li>Built individual learning plans</li>
+                        <li>Aligned developers and designers on decision-making</li>
+                        <li>Prepared design solutions for issues from external accessibility audits, which significantly improved the overall level accessibility</li>
+                        <li>Introduced a Accessibility Annotation Kit, now used by 40+ designers in Sanoma Learning</li>
+                        <li>Co-founded the Accessibility Champions Group in Sanoma Learning.</li>
+                    </ul>
+                    
+                    <figure class="illustration-with-caption" style="max-width: 500px;">
+                        <img src="assets/projects/lms/lms-a11y-individual-learning-plan.jpg" alt="An individual learning plan to enhance accessibility skills for a UX designer" class="illustration">
+                        <figcaption>A basic individual learning plan to enhance accessibility skills for UX designers in my team. I adapted it for each designer's needs.</figcaption>
+                    </figure>
+                    
+                    <p>The team learned to speak the same language, and accessibility issues decreased significantly.</p>
+                    
+                    <h2>Collaboration & Adoption</h2>
+                    <p>A big part of my role is enabling collaboration between teams that previously worked in isolation.</p>
+                    <p>I established weekly syncs with the Design System engineering team to review new components, edge cases, and implementation challenges early in the process. Together with the Product Owner, we also introduced regular pre-planning sessions to align upcoming work and coordinate requests from other product teams.</p>
+                    <p>In practice, this means building communication and shared ownership around the system — making sure design and engineering decisions were discussed collaboratively instead of being solved independently inside separate teams.</p>
+                    
+                    <blockquote class="blockquote-box">Aleksandra combines a rare level of professionalism with a deep commitment to accessibility and product quality. She always ensures her team is moving in a clear, unified direction, and her approach to organizing work is truly impressive. <span class="author">Marcin Klimaszewski</span> <span class="role">Head of UX at Sanoma Learning</span></blockquote>
 
-                <h2>Accessibility</h2>
-                <p>TBA</p>
+                    <h2>Impact</h2>
+                        <div class="impact-grid">
+                            <div class="impact-card">
+                                <span class="impact-icon">🚀</span>
+                                <h3>Product</h3>
+                                    <ul>
+                                        <li>Faster development due to predictable patterns</li>
+                                        <li>Increased the design system adoption</li>
+                                        <li>Improved product accessibility</li>
+                                        <li>Consistent cross-platform experience</li>
+                                    </ul>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <span class="impact-icon">⚽</span>
+                                <h3>UX Team</h3>
+                                    <ul>
+                                        <li>Scaled the team from 3 → 7 specialists</li>
+                                        <li>Designers grew significantly in maturity and confidence</li>
+                                        <li>Stronger collaboration and mentorship culture</li>
+                                    </ul>
+                            </div>
 
-                <h2>Collaboration & Adoption</h2>
-                <p>A big part of my role is enabling collaboration between teams that previously worked in isolation.</p>
-                <p>I established weekly syncs with the Design System engineering team to review new components, edge cases, and implementation challenges early in the process. Together with the Product Owner, we also introduced regular pre-planning sessions to align upcoming work and coordinate requests from other product teams.</p>
-                <p>In practice, this meant building communication and shared ownership around the system — making sure design and engineering decisions were discussed collaboratively instead of being solved independently inside separate teams.</p>
+                            <div class="impact-card">
+                                <span class="impact-icon">🧩</span>
+                                <h3>System Foundations</h3>
+                                    <ul>
+                                        <li>Introduced layout & page templates</li>
+                                        <li>Replaced 300+ colors with 56 structured tokens</li>
+                                        <li>Unified disparate icon sets into one predictable icon system</li>
+                                        <li>Reorganized the design system for clarity, scalability</li>
+                                    </ul>
+                            </div>
 
-                <h2>Impact</h2>
-                    <div class="impact-grid">
-                        <div class="impact-card">
-                            <span class="impact-icon">🚀</span>
-                            <h3>Product</h3>
-                                <ul>
-                                    <li>Faster development due to predictable patterns</li>
-                                    <li>Increased the design system adoption</li>
-                                    <li>Improved product accessibility</li>
-                                    <li>Consistent cross-platform experience</li>
-                                </ul>
+                            <div class="impact-card">
+                                <span class="impact-icon">🤝</span>
+                                <h3>Organization</h3>
+                                    <ul>
+                                        <li>UX–engineering collaboration strengthened, especially around accessibility</li>
+                                        <li>Accessibility tools adopted across Sanoma Learning (40+ designers)</li>
+                                        <li>Structured how UX and UX Research work together</li>
+                                    </ul>
+                            </div>
+                            
                         </div>
-                        
-                        <div class="impact-card">
-                            <span class="impact-icon">⚽</span>
-                            <h3>UX Team</h3>
-                                <ul>
-                                    <li>Scaled the team from 3 → 7 specialists</li>
-                                    <li>Designers grew significantly in maturity and confidence</li>
-                                    <li>Stronger collaboration and mentorship culture</li>
-                                </ul>
-                        </div>
-
-                        <div class="impact-card">
-                            <span class="impact-icon">🧩</span>
-                            <h3>System Foundations</h3>
-                                <ul>
-                                    <li>Introduced layout & page templates</li>
-                                    <li>Replaced 300+ colors with 56 structured tokens</li>
-                                    <li>Unified disparate icon sets into one predictable icon system</li>
-                                    <li>Reorganized the design system for clarity, scalability</li>
-                                </ul>
-                        </div>
-
-                        <div class="impact-card">
-                            <span class="impact-icon">🤝</span>
-                            <h3>Organization</h3>
-                                <ul>
-                                    <li>UX–engineering collaboration strengthened, especially around accessibility</li>
-                                    <li>Accessibility tools adopted across Sanoma Learning (40+ designers)</li>
-                                    <li>Structured how UX and UX Research work together</li>
-                                </ul>
-                        </div>
-                        
-                    </div>
-
-
-
 
                 <section class="footer">
                     <p>© Aleksandra Shkurat · 2026</p>
