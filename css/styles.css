@@ -503,9 +503,9 @@ header {
 }
 
 img.sticker {
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.05));
     width: 5.5rem;
     height: auto;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.05));
 
     &:nth-of-type(2n+1) {
             transform: rotate(10deg);
@@ -603,14 +603,38 @@ img.sticker {
 /* Links */
 
 .link {
-    color: var(--primary-500);
-    text-decoration-thickness: 0.125em;
-    text-decoration-skip-ink: none;
-    text-underline-offset: 0.125em;
-    transition: all 0.3s ease;
+    font-size: 0.875em;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    border: 1px solid var(--gray-200);
+    padding: 0 0.25em 0.0625em 1.5em;
+    margin-inline-end: 0.125em;
+    border-radius: 0.25em;
+    position: relative;
+    --favicon-url: none;
+
+    @supports (corner-shape: squircle) {
+        border-radius: 1em;
+        corner-shape: squircle;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0.25em;
+        top: 0.25em;
+        width: 1em;
+        height: 1em;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: var(--favicon-url);
+    }
 
     &:hover {
-        color: var(--primary-600);
+        border-color: var(--gray-300);
+        background-color: var(--gray-100);
     }
 
     /* &[target="_blank"]::after {
