@@ -832,7 +832,7 @@ p + .project-tags {
 .dribbble-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 20px;
+  gap: 1em;
 
   margin-block-start: 1.5em;
 
