@@ -563,6 +563,7 @@ img.sticker {
     
     img.sticker {
         margin-inline: -0.75em;
+        width: 4.5rem;
     }
 }
 
