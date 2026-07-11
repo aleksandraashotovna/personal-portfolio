@@ -27,7 +27,7 @@ fetch('https://super-frangollo-b23bf8.netlify.app/.netlify/functions/get-shots')
 
     dribbbleLink.innerHTML = `
       <div class="icon-wrapper">
-          <svg aria-hidden="true" class="icon jumping-icon">
+          <svg aria-hidden="true" class="icon jumping">
               <use href="assets/icons.svg#dribbble"></use>
           </svg>
       </div>
