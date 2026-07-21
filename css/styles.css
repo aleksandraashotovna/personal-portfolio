@@ -796,7 +796,7 @@ p + .project-tags {
 .portfolio-grid {
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(35rem, 100%), 1fr));
     margin-block-start: 1.5em;
 }
 
