@@ -608,7 +608,7 @@ img.sticker {
     text-decoration: none;
     transition: border-color 0.3s ease, background-color 0.3s ease;
     border: 1px solid var(--gray-200);
-    padding: 0 0.25em 0.0625em 1.625em;
+    padding: 0 0.25em 0.0625em 1.75em;
     margin-inline-end: 0.125em;
     border-radius: 0.25em;
     position: relative;
@@ -640,20 +640,20 @@ img.sticker {
     }
 
     &:hover {
-        border-color: var(--gray-300);
-        background-color: var(--gray-100);
+        border-color: var(--gray-200);
+        background-color: var(--gray-150);
     }
 
     /* &[target="_blank"]::after {
-        content: "↗";
+        content: "";
         display: inline-block;
         margin-inline: 0.125em;
         position: relative;
-        top: 0.15em;
+        background-image: url("assets/icons.svg#dribbble");
         transition: transform 0.3s ease;
-    }
+    } */
 
-    &[target="_blank"]:hover::after {
+    /* &[target="_blank"]:hover::after {
         transform: rotate(45deg);
     } */
 }
