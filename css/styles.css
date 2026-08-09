@@ -898,7 +898,7 @@ p + .project-tags {
 
 /* Cards */
 
-.project {
+.project-card {
     padding: 0;
     background-color: var(--bg-secondary);
     color: var(--text-color);
@@ -934,7 +934,7 @@ p + .project-tags {
     }
 }
 
-.project .description {
+.project-card .description {
     padding: 1em 2em;
 }
 
