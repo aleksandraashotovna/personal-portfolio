@@ -903,39 +903,68 @@ p + .project-tags {
 /* Cards */
 
 .project-card {
+    --project-card-radius: 1em;
+
+    position: relative;
     padding: 0;
+    margin: 0;
     background-color: var(--bg-secondary);
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    border-radius: 1em;
+    border-radius: var(--project-card-radius);
     border: 1px solid hsl(from var(--gray-200) h s l / 0.5);
     text-decoration: none;
     transition: background-color 1s var(--card-ease), border-color 1s var(--card-ease), box-shadow 1s var(--card-ease);
-    overflow: hidden;
 
     @supports (corner-shape: squircle) {
-        border-radius: 2em;
+        border-radius: calc(var(--project-card-radius) * 2);
         corner-shape: squircle;
     }
 
-    h3 {
+    .project-card-title {
         margin-block: 0.25rem 0.5em;
+
+        a:focus,
+        a:focus-visible {
+            outline: none;
+        }
     }
 
-    p {
-        color: var(--text-color-secondary);
+    .project-card-cover {
+        border-radius: calc(var(--project-card-radius) - 1px) calc(var(--project-card-radius) - 1px) 0 0;
+
+        @supports (corner-shape: squircle) {
+            border-radius: calc(var(--project-card-radius) * 2 - 1px) calc(var(--project-card-radius) * 2 - 1px) 0 0;
+            corner-shape: squircle;
+        }
+
     }
 
-    > * {
-        align-self: start;
-    }
+}
 
-    .illustration {
-        border-radius: 0;
-        box-shadow: none;
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card-link::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+    border-radius: var(--project-card-radius);
+
+    @supports (corner-shape: squircle) {
+        border-radius: calc(var(--project-card-radius) * 2);
+        corner-shape: squircle;
     }
+}
+
+.project-card-link:focus::before {
+	outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
 }
 
 .project-card .description {
