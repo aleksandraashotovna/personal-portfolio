@@ -10,35 +10,32 @@
   --gray-500: hsl(220 1% 46%);
   --gray-600: hsl(220 2% 33%);
   --gray-700: hsl(210 4% 20%);
-  --gray-750: hsl(210 5% 15%);
+  --gray-750: hsl(220, 5%, 12%);
   --gray-800: hsl(210 11% 7%);
 
-  /* --primary-100: hsl(214, 59%, 77%);
-  --primary-500: hsl(210, 90%, 40%); */
-
-  --primary-50: hsl(195.29, 100%, 90%);
-  --primary-100: hsl(198.95, 100%, 81.37%);
-  --primary-200: hsl(202.45, 98.58%, 72.35%);
-  --primary-300: hsl(206.23, 97.86%, 63.33%);
-  --primary-400: hsl(209.48, 95.83%, 52.94%);
-  --primary-500: hsl(214.47, 100%, 44.71%);
-  --primary-600: hsl(218.27, 100%, 36.27%);
-  --primary-700: hsl(221.96, 100%, 28.04%);
-  --primary-800: hsl(225.45, 100%, 19.41%);
+  --primary-50: hsl(271, 100%, 96%);
+  --primary-100: hsl(271, 100%, 87%);
+  --primary-200: hsl(271, 100%, 78%);
+  --primary-300: hsl(271, 100%, 69%);
+  --primary-400: hsl(271, 100%, 60%);
+  --primary-500: hsl(271, 100%, 51%);
+  --primary-600: hsl(271, 100%, 40%);
+  --primary-700: hsl(271, 100%, 29%);
+  --primary-800: hsl(271, 100%, 18%);
 }
 
 /* Color coding & branding */
 
 .linkedin {
-  --core-color: hsl(210 90% 40%);
+  --core-color: light-dark(hsl(210 90% 40%), hsl(210, 100%, 70%));
 }
 
 .dribbble {
-  --core-color: hsl(337 79% 61%);
+  --core-color: light-dark(hsl(337 79% 61%), hsl(337, 100%, 70%));
 }
 
 .figma {
-  --core-color: hsl(241 100% 66%);
+  --core-color: light-dark(hsl(241 100% 66%), hsl(241, 100%, 72%));
 }
 
 .csr {
@@ -50,7 +47,6 @@
 }
 
 .lms {
-  /* --core-color: hsl(26 95% 46%); */
   --core-color: hsl(264, 48%, 42%);
 }
 
@@ -60,11 +56,6 @@
 .csr,
 .ehr,
 .lms {
-  --bg-color: hsl(from var(--core-color) h s 97%);
-
-  --outline-color: hsl(from var(--core-color) h s 85%);
-
-  --shadow-color:
-    0 8px 20px hsl(from var(--core-color) h s l / 0.15),
-    0 0px 2px hsl(from var(--core-color) h s l / 0.2);
+  --bg-color: light-dark(hsl(from var(--core-color) h s 97%), hsl(from var(--core-color) h 40% 15%));
+  --outline-color: light-dark(hsl(from var(--core-color) h s 85%), hsl(from var(--core-color) h 50% 30%));
 }
