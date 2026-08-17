@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design system for a legacy LMS • Aleksandra Shkurat • Product Design Lead</title>
+
+        <!-- <meta property="og:title" content="Aleksandra Shkurat • Product Design Lead" /> -->
+        <meta property="og:image" content="https://ashkurat.com/assets/og-cover.jpg" />
+        <!-- <meta property="og:description" content="Product Design Lead helping teams build accessible, scalable digital products through design systems, UX strategy, and collaborative leadership." /> -->
+         <meta property="og:type" content="website">
+         <meta property="og:site_name" content="Aleksandra Shkurat">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/project.css">
+        <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+        <link rel="icon" href="assets/favicon.png" type="image/png">
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function(m,e,t,r,i,k,a){
+                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+            })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106605320', 'ym');
+
+            ym(106605320, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/106605320" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+        
+        <script src="js/hamburger-menu.js"></script>
+    </head>
+
+    <body>
+
+        <a href="#main" class="skiplink">Skip to content</a>
+        
+        <div>
+
+            <div class="content-area">
+                <nav class="in-pade-nav breakout" aria-label="Main navigation">
+                    <div class="logo">
+                        <img class="portrait" src="assets/photos/aleksandra_portrait.jpg" alt="Aleksandra's portrait">
+                        <p>Aleksandra Shkurat</p>
+                    </div>
+                    <ul class="menu-items">
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                    <button class="burger" aria-label="Navigation menu" aria-expanded="false">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </button>
+                </nav>
+                <div class="mobile-menu">
+                    <ul>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="main" class="content-area lms">
+                <header>
+                        <h1>Making a Design System work at scale</h1>
+                        <p class="subtitle">I transformed a fragmented UI into a scalable design system adopted by 8 development teams. I simplified the existing pattern library, introduced clear usage guidelines, and established a collaborative process with engineering, reducing inconsistency and enabling the system to scale predictably as the product evolved.</p>
+
+                        <div class="project-tags">
+                            <div class="project-tag">2022–present</div>
+                            <div class="project-tag">Team lead</div>
+                            <div class="project-tag">UX Strategy</div>
+                            <div class="project-tag">Accessibility</div>
+                        </div>
+                </header>
+                
+                <div class="img-grid breakout">
+                    <img class="illustration wide" src="assets/projects/lms-ds/lms-ds-cover.jpg" alt="A list of some reports in a course" class="illustration">
+                </div>
+                
+                <h2>Context</h2>
+                <p><a href="https://itslearning.com/" class="link" target="_blank" rel="noopener noreferrer">itslearning</a> is a large European Learning Management System (LMS) with a 25 year long history that serves millions of teachers and students across K-12, higher and vocational education in 10+ countries.</p>
+                <p>itslearning's design system is called Prometheus and consists of a Svelte component library, a Figma UI kit and web-based guidelines for internal use.</p>
+                
+                <h2>Problem</h2>
+                <p>When I joined itslearning in late 2022, the design system already existed, but hardly anyone used it. Only the team maintaining the system relied on its components, while other product teams continued building custom solutions for similar cases.</p>
+                <p>The UX team faced the same issue. The UI kit had grown without clear rules or ownership: duplicated components, overlapping styles and inconsistent decisions. Designers regularly introduced new patterns, and engineering teams implemented them as-is, which made the interface increasingly fragmented over time.</p>
+
+                <h2>Layout system</h2>
+                    <p>The product contained hundreds of pages built independently over more than 20 years. Despite their variety, most of them followed a small number of recurring patterns.</p>
+                    <p>I analysed the existing interface and introduced a unified page template system. It defines consistent navigation, content area, panels, spacing, and responsive behavior. Content layouts could adapt between narrow, wide, and full-width containers depending on the use case.</p>
+                    <div class="img-grid breakout">
+                        <figure class="illustration-with-caption wide">
+                            <video class="illustration"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                preload="metadata">
+                                <source src="assets/projects/lms-ds/page template - content area.webm" type="video/webm">
+                            </video>
+                            <figcaption>Content area in the Page template</figcaption>
+                        </figure>
+                    </div>
+                    <div class="img-grid breakout">
+                        <figure class="illustration-with-caption wide">
+                            <video class="illustration"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                preload="metadata">
+                                <source src="assets/projects/lms-ds/page template - panels.webm" type="video/webm">
+                            </video>
+                        <figcaption>Panels in the Page template</figcaption>
+                    </figure>
+                </div>
+                
+                <p>Today, both designers and developers start from a shared template instead of a blank canvas, which dramatically speeds up design and implementation. A common code also allows to evolve the templates over time to make them more flexible and easier to use.</p>
+                <blockquote class="blockquote-box">It's so simple to layout the page content now with standard sizes in the designs. Both for spacing, layout etc. So thank you! Even though we can't put it everywhere yet, for the new stuff it's a life saver. <span class="author">Michael Fürstenberg</span><span class="role">Frontend Lead & Architect at itslearning</span></blockquote>
+                
+                <p><a class="link" href="https://sanomalearning.design/" target="_blank" rel="noopener noreferrer">Sanoma Learning Design System</a> reused this approach to layouts and made it available to all product teams across <a class="link" href="https://www.sanomalearning.com/" target="_blank" rel="noopener noreferrer">Sanoma Learning</a>.</p>
+                
+                <h2>Colors</h2>
+                <p>The color palette had grown over time without clear structure or rules. Similar colors were used inconsistently, and introducing branding changes was risky because accent and brand colors appeared almost everywhere in the interface.</p>
+                <ul>
+                    <li>Reorganized the palette without changing the UI.</li>
+                    <li>Reduced the number of tokens in the main palette from 83 to 56.</li>
+                    <li>Defined clear roles for each color.</li>
+                    <li>Mapped 300+ custom colors and replaced them with tokens.</li>
+                </ul>
+                
+                <div class="img-grid breakout">
+                    <img class="illustration wide" src="assets/projects/lms-ds/color-palette.jpg" alt="Color palette">
+                </div>
+                
+                <p>As a result, no new colors have been introduced in the last 2 years. The usage rules are clear and strainghtforward, with hesitance between options being eliminated.</p>
+                
+                <div class="img-grid breakout">
+                    <img class="illustration" src="assets/projects/lms-ds/personal menu - light.jpg" alt="Personal menu, light theme">
+                    <img class="illustration" src="assets/projects/lms-ds/personal menu - dark.jpg" alt="Personal menu, dark theme">
+                </div>
+                
+                <h2>Iconography</h2>
+                    <p>The icon system had evolved organically over many years, resulting in inconsistent styles, proportions, and alignment behavior across the product.</p>
+                    <p>We rebuilt the system around a unified structure using Font Awesome as a foundation. System icons were standardized for consistency and easier maintenance, while brand icons were redesigned into a single coherent style.</p>
+                    <img class="full-width brand-icons" src="assets/projects/lms-ds/brand-icons.png" alt="Brand icons">
+                    <p>To make the system scalable, I also introduced reusable templates that allow any designer, regardless of illustration skills, to create new icons consistent with the existing set:</p>
+                    <img class="illustration" src="assets/projects/lms-ds//icon-templates.jpg" alt="Icon templates">
+
+                <h2>Typography</h2>
+                    <p>Similarly to colors, I consolidated all typography into a smaller, structured set of reusable text styles and mapped legacy styles to it. Over time, this significantly improved visual consistency across new features and redesigned areas of the product.</p>
+                    <div class="img-grid breakout">
+                        <img class="illustration" src="assets/projects/lms-ds/typography.jpg" alt="Typography styles">
+                        <img class="illustration" src="assets/projects/lms-ds/font-selector.jpg" alt="Font selector">
+                    </div>
+                    <p>Once the typography system became predictable and consistent across itslearning, it made changing fonts individually per customer and user for personalization and accessibility possible. I analysed customer needs and internal requirement and prepared a limited font selection.</p>
+
+                <h2>Attention to detail</h2>
+                    <p>Beyond large system changes, I consistently focused on small interface improvements that made the product feel more polished, cohesive, and intentional. From interaction states to spacing, hierarchy, and visual consistency, these details helped strengthen the overall quality and perception of the system.</p>
+                    <div class="img-grid breakout">
+                        <img class="illustration" src="assets/projects/lms-ds/reports.jpg" alt="A list of some reports in a course">
+                        <img class="illustration" src="assets/projects/lms-ds/reorder plans.jpg" alt="Plans reordering in progress">
+                        <img class="illustration" src="assets/projects/lms-ds/folder-icons.jpg" alt="Plans reordering in progress">
+                        <img class="illustration" src="assets/projects/lms-ds/global search.jpg" alt="Global search, the input field is selected and a list of suggestions is shown">
+                    </div>
+
+                    
+                    <h2>Accessibility</h2>
+                    <p>When I joined, designers and developers were in a state of constant disagreement. I took multiple steps to change attitude in the UX team and improve communication with the accessibility front-end team:</p>
+                    <ul>
+                        <li>Taught designers to read and interpret <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> and Understanding documents</li>
+                        <li>Built individual learning plans</li>
+                        <li>Aligned developers and designers on decision-making</li>
+                        <li>Prepared design solutions for issues from external accessibility audits, which significantly improved the overall level accessibility</li>
+                        <li>Introduced a Accessibility Annotation Kit, now used by 40+ designers in Sanoma Learning</li>
+                        <li>Co-founded the Accessibility Champions Group in Sanoma Learning.</li>
+                    </ul>
+                    
+                    <figure class="illustration-with-caption" style="max-width: 500px;">
+                        <img src="assets/projects/lms/lms-a11y-individual-learning-plan.jpg" alt="An individual learning plan to enhance accessibility skills for a UX designer" class="illustration">
+                        <figcaption>A basic individual learning plan to enhance accessibility skills for UX designers in my team. I adapted it for each designer's needs.</figcaption>
+                    </figure>
+                    
+                    <p>The team learned to speak the same language, and accessibility issues decreased significantly.</p>
+                    
+                    <h2>Collaboration & Adoption</h2>
+                    <p>A big part of my role is enabling collaboration between teams that previously worked in isolation.</p>
+                    <p>I established weekly syncs with the Design System engineering team to review new components, edge cases, and implementation challenges early in the process. Together with the Product Owner, we also introduced regular pre-planning sessions to align upcoming work and coordinate requests from other product teams.</p>
+                    <p>In practice, this means building communication and shared ownership around the system, making sure design and engineering decisions are discussed collaboratively instead of being solved independently inside separate teams.</p>
+                    <p>Consequently, adoption of the Prometheus design system increased from 1 to all 8 developemnt teams working on itslearning.</p>
+                    
+                    <blockquote class="blockquote-box">Aleksandra combines a rare level of professionalism with a deep commitment to accessibility and product quality. She always ensures her team is moving in a clear, unified direction, and her approach to organizing work is truly impressive. <span class="author">Marcin Klimaszewski</span> <span class="role">Head of UX at Sanoma Learning</span></blockquote>
+
+                    <h2>Impact</h2>
+                        <div class="impact-grid">
+                            <div class="impact-card two-rows">
+                                <img class="impact-sticker" src="/assets/stickers/shapes.svg" alt="" aria-hidden="true">
+                                <p>Turned a fragmented legacy UI into a scalable system, which in turn enabled</p>
+                                <ul>
+                                    <li>personal font selection</li>
+                                    <li>customer branding</li>
+                                    <li>dark theme</li>
+                                </ul>
+                                <p>This also brought the control over the itslearning look & feel back to the product team.</p>
+                            </div>
+                            <div class="impact-card">
+                                <img class="impact-sticker" src="/assets/stickers/code.svg" alt="" aria-hidden="true">
+                                <p>Increased adoption of the Prometheus design system from 1 to 8 development teams.</p>
+                            </div>
+                            <div class="impact-card">
+                                <img class="impact-sticker" src="/assets/stickers/a11y.svg" alt="" aria-hidden="true">
+                                <p>Strengthened accessibility and collaboration.</p>
+                            </div>
+                        </div>
+
+
+            </main>
+                
+                <footer id="footer" class="footer-sticky content-area dark-theme">
+                    <div id="contact" class="breakout">
+                        <a class="footer-sticky-email-link" href="mailto:contact@ashkurat.com">contact@ashkurat.com</a>
+                        <div class="contact-details-layout">
+                            <ul class="footer-sticky-social-links">
+                                <li><a href="https://www.linkedin.com/in/aleksandrashkurat/" class="link-block social linkedin" target="_blank" rel="noopener noreferrer" aria-describedby="opens-new-tab" aria-label="LinkedIn">
+                                        <svg aria-hidden="true" class="icon wiggling">
+                                            <use xlink:href="assets/icons.svg#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li><a href="https://dribbble.com/ashkurat" class="link-block social dribbble" target="_blank" rel="noopener noreferrer" aria-describedby="opens-new-tab" aria-label="Dribbble">
+                                        <svg aria-hidden="true" class="icon jumping">
+                                            <use xlink:href="assets/icons.svg#dribbble"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li><a href="https://www.figma.com/@ashkurat" class="link-block social figma" target="_blank" rel="noopener noreferrer" aria-describedby="opens-new-tab" aria-label="Figma Community">
+                                        <svg aria-hidden="true" class="icon wiggling">
+                                            <use xlink:href="assets/icons.svg#figma"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div>
+                                <p>I'm always interested in new opportunities. Feel free to get in touch!</p>
+                                <p>© Aleksandra Shkurat · 2022–2026</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </footer>
+            
+        </div>
+
+        <script src="js/link-favicons.js"></script>
+        
+    </body>
+</html>
