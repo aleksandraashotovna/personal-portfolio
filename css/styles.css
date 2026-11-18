@@ -27,8 +27,8 @@
     --shadow: 
         0 8px 12px hsl(from var(--gray-800) h s l / 0.05);
     --shadow-images:
-        0 8px 20px hsl(from var(--gray-800) h s l / 0.05),
-        0 0px 2px hsl(from var(--gray-800) h s l / 0.15);
+        0 0 0 1px #0000000f,
+        0px 2px 2px #0000000a;
 
     /* font-size: clamp(1rem, 1.25vw, 1.25rem); */
     font-size: 1rem;
@@ -165,7 +165,7 @@ video {
         max-width: 100%;
         height: auto;
         object-fit: cover;
-        /* box-shadow: var(--shadow-images); */
+        box-shadow: var(--shadow-images);
 
         @supports (corner-shape: squircle) {
             border-radius: 2em;
@@ -687,7 +687,7 @@ img.sticker {
     flex-direction: row;
     gap: 1.25em;
     border-radius: 1em;
-    border: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), hsl(from var(--gray-600) h s l / 0.25));
+    box-shadow: var(--shadow-images);
     padding: 1.5em 2em;
     text-decoration: none;
     align-items:center;
@@ -862,95 +862,6 @@ p + .project-tags {
     margin-block-start: 1.5em;
 }
 
-/* Dribbble shots */
-
-.dribbble-shots {
-    h3 {
-        margin-block-start: 0;
-    }
-
-    .link-block.dribbble {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    padding-block: 3em;
-
-    transition: background-color 0.3s ease, fill 0.3s ease, border-color 0.3s ease;
-}
-
-}
-
-.dribbble-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 1em;
-
-  margin-block-start: 1.5em;
-
-  @media screen and (max-width: 480px) {
-        grid-template-columns: 1fr;
-    }
-}
-
-.dribbble-grid img {
-  transition: transform 1s var(--card-ease);
-}
-
-.dribbble-grid a:not(.link-block.dribbble) {
-    display: block;
-    position: relative;
-    border-radius: 1em;
-    overflow: hidden;
-    border: 1px solid hsl(from var(--gray-200) h s l / 0.5);
-
-    @supports (corner-shape: squircle) {
-        border-radius: 2em;
-        corner-shape: squircle;
-    }
-
-    .icon-wrapper {
-        position: absolute;
-        top: 0.5em;
-        right: 0.25em;
-        margin-inline: auto;
-
-        opacity: 0;
-        transform: scale(0.6);
-        transition: all 0.5s ease;
-    }
-}
-
-.dribbble-grid a:not(.link-block.dribbble):hover,
-.dribbble-grid a:not(.link-block.dribbble):focus-visible {
-    img {
-        transform: scale(1.03);
-    }
-
-    .icon-wrapper {
-        opacity: 1;
-        top: 0.25em;
-    }
-}
-
-.dribbble-grid img {
-  width: 100%;
-  display: block;
-}
-
-.dribbble-grid-error {
-  text-align: center;
-  padding: 40px 0;
-  font-family: sans-serif;
-  background-color: var(--gray-100);
-  border-radius: 1em;
-
-    @supports (corner-shape: squircle) {
-        border-radius: 2em;
-        corner-shape: squircle;
-    }
-}
-
 /* Cards */
 
 .project-card {
@@ -965,7 +876,7 @@ p + .project-tags {
     flex-direction: column;
     gap: 0.5em;
     border-radius: var(--project-card-radius);
-    border: 1px solid hsl(from var(--gray-200) h s l / 0.5);
+    box-shadow: var(--shadow-images);
     text-decoration: none;
     transition: background-color 1s var(--card-ease), border-color 1s var(--card-ease), box-shadow 1s var(--card-ease);
 
@@ -1100,6 +1011,7 @@ p + .project-tags {
 
 .social {
     justify-content: center;
+    border: 1px solid light-dark(hsl(from var(--gray-200) h s l / 0.5), hsl(from var(--gray-600) h s l / 0.25));
 
     &:hover,
     &:focus-visible {
